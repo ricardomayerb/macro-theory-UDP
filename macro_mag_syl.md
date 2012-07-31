@@ -1,4 +1,4 @@
-MacRoeconomic TheoRy (with some R)
+Macroeconomic Theory 
 ========================================================
 
 Overview
