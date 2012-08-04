@@ -26,7 +26,7 @@ Let me introduce you to a great little thing: Git ... and Github, which is fairl
 
 + If you are working on windows, I suggets you download github's native app and run it to set up everything it's a breeze: https://help.github.com/articles/set-up-git#platform-windows . If you are in Linux, follow the instructions in https://help.github.com/articles/set-up-git#platform-linux
 
-+ Now, go to https://github.com/ricardomayerb/macro-theory-UDP and just clone this repository (macro-theory-udp). This should create new folders in your PC.
++ Now, go to https://github.com/ricardomayerb/macro-theory-UDP and just **clone** this repository (macro-theory-udp). This should create new folders in your PC. There is a nice, big, button Clone in Windows, if it applies to you, try it!
 
 
 
