@@ -21,6 +21,15 @@ You should read first half of the book during the first week and the second part
      + Conclusion, 133-142
 
 
+[2] Jean-Pascal Benassy: Macroeconomic Theory **[JPB]**
+------------
+This a graduate-level textbook. You may sprint through Davis Moss' book, but this one is a marathon: pace yourself. Here is a weekly schedule suggested for this class:
+
+ + Week one: Go over Chapter 1 in one study session. This is just a reminder of things we've already study, so you can cover it in 60 minutes of reading, excluding the Appendix. After the first reading, I suggest you pay extra attention to these parts:
+ 
+     + Go back to section 1.6.3 *Conditional and Unconditional Convergence: an example*. Make sure you understand why equation implies that "after controlling by savings, there is a negative relation between capital and capital growth". Are you comfortable with simple ODEs (ordinary difference equations)?  Does the solution to this equation seems like voodoo to you? If it does, review the first exercises about ODEs in our problem set.
+     
+     + 
  
 
 
