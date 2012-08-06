@@ -51,7 +51,7 @@ $$
 
 + Example: $y_t = A k_t^{\alpha}$
 
-+ ODE: $\frac{1}{1-\alpha} \frac{k_t^{1-\alpha}}{d t} = sA(1-\alpha) - (\delta+n) k^{1-\alpha}_t (1-\alpha)$    
++ ODE: $ \frac{k_t^{1-\alpha}}{d t} = sA(1-\alpha) - (\delta+n) k^{1-\alpha}_t (1-\alpha)$    
 
 + Solution:
 $$
