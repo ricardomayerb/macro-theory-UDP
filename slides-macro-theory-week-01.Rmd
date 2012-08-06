@@ -1,0 +1,89 @@
+#Macroeconomic Theory
+
+###Southern Spring 2012 
+
+- Week 1: 
+
+- Neoclassical growth model (Solow-Swan and Uzawa)
+
+- Basic stabilization policy models
+
+- First version: 2012/08/05, this version: 2012/08/05
+
+
+#Solow-Swan model of (neoclassical) economic growth
+
+- Venerable ancestor of modern DGSE modern models (much to the despair of Bob Solow!)
+
+- Common ground to talk about the contributions of factors and productivities to output growth
+
+- Introduces important terms into the sytudent's vocabulary: total factor productivity, balanced growth path, efficiency units, etc.
+
+- ... and your first use of ODEs! 
+
+
+#Solow-Swan (cont. 2)
+
++ Relevant measure of capital: absolute, per capita or per efficiency units, determines what can be stationary
+
++ Key equation is capital accumulation as a function of savings, marginal returns and effective depreciation
+
++ Nice DE:
+ $$
+ \begin{equation}\label{capacc}
+ \dot{k}_t = s f(k_t) - (n+\delta) k_t 
+ \end{equation}
+ $$
+
+#Solow-Swan (cont. 3)
+
++ Homegeneity degree one implies:
+$$
+F_L L +  F_K K = F(K,L)
+$$
+
++ prices equal to marginal productivity get us
+$$
+\omega_t L_t + \kappa_t K_t = Y_t
+$$
+
+#Solow-Swan (cont. 4)
+
++ Example: $y_t = A k_t^{\alpha}$
+
++ ODE: $\frac{1}{1-\alpha} \frac{k_t^{1-\alpha}}{d t} = sA(1-\alpha) - (\delta+n) k^{1-\alpha}_t (1-\alpha)$    
+
++ Solution:
+$$
+k_t^{1-\alpha} = \frac{sA}{\delta+n} + \left(k_0^{1-\alpha} -  \frac{sA}{\delta+n}\right) e^{-(1-\alpha)(\delta+n)t}
+$$
+
++ Code this solution and compare it across different parameter values
+
+
+#Uzawa model
+
++ Add human capital, $H_t$,  same $\delta$ for simplicity
+
++ $Y_t = K_t^{\alpha} H_t^{\beta} (A_t L_t)^{1-\alpha-\beta}$ and let $\gamma_A := \frac{\dot{A}_t}{A_t}$, and $\delta$ same for $K$ and $H$
+
++ In units of  effective labor, $A_t L_t$:
+$$
+\begin{align}
+\dot{h}_t = & s_H y_t - (n+\gamma+\delta)h_t \\
+h^* = & \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \right)^{1/(1 - \alpha - \beta)}\end{align}
+$$
+ 
+#Uzawa (cont. 2)
+ $$
+\begin{align}
+\ln \frac{Y_t}{L_t} = & \ln A_0 + \gamma_A t \\ 
+  & + \frac{\alpha}{1-\alpha-\beta} [\ln s_K - \ln (n+\delta+\gamma_A)] \\
+  & + \frac{\beta}{1-\alpha-\beta} [\ln s_H - \ln (n+\delta+\gamma_A)]
+\end{align} 
+$$
+
++ $\beta = 0$, $\frac{\alpha}{1-\alpha}=1.43$, $\alpha=0.59$
++ $\frac{\alpha}{1-\alpha - \beta}=0.71$, $\frac{\beta}{1-\alpha - \beta}=0.74$, $\alpha=0.29$
+
+
