@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Macroeconomic Theory </title>
+
+<base target="_blank"/>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>Macroeconomic Theory </h1>
+
+<h2>Overview</h2>
+
+<p>The primary subject for this course is, obviously, macroeconomic theory, but I also want to get you started with some empirical tools and commonly used data.  </p>
+
+<h3>Major Themes</h3>
+
+<ol>
+<li><p><strong>Macro Concerns</strong>: short run fluctuations in output and employment, evolution of aggregate prices.</p></li>
+<li><p><strong>Macro Data</strong>: explorations of major international databases (Penn World Tables, World Development Indicators, etc), FRED for USA and Cantral Bank of Chile database.</p></li>
+<li><p><strong>Macro Modelling</strong>: General equilibrium versus partial. Proper role of models. Quantitative versus qualitative statements.</p></li>
+</ol>
+
+<h3>Sketch of classes:</h3>
+
+<p>Since the student&#39;s background is at the level of intermediate macro with emphasis in IS-LM model, with little on the way of optimization-based argument, we will start with fairly simple models, sppeding-up things considerably after the third week. The order of topics is, roughly, the following</p>
+
+<ul>
+<li>Non-mathematical review (crash course in macroeconomics, so we all stand in basic, common level)</li>
+<li>Basic neoclassical growth model</li>
+<li>Basic stabilization policies</li>
+<li>Simple models with expectations</li>
+<li>Intertemporal Models with optimizing agents</li>
+<li>Competitive business cycles</li>
+<li>Bayesian learning and changing expectations</li>
+<li>Money, cycles and nominal rigidities</li>
+<li>Consumption, Investment, Inventories and Credit</li>
+<li>Macro-models used by actual Central Banks</li>
+</ul>
+
+<h3>Texts and documents</h3>
+
+<ol>
+<li>Macroeconomic Theory, Jean-Pascal Benassy</li>
+<li>Concise Guide to Macroeconomics: What Managers, Executives, and Students Need to Know , David A. Moss</li>
+<li>Economic Growth , Robert J. Barro and Xavier I. Sala-i-Martin</li>
+<li>A First Course in Optimization Theory, Rangarajan K. Sundaram</li>
+</ol>
+
+<h3>Languages</h3>
+
+<p>Yes, course materials are 90% in English, including this syllabus. Get over it. But Mark Twain&#39;s language will <strong>not</strong> be the only language you&#39;ll have to master: there is also <em>LaTeX</em>, <em>Markdown</em> and <em>R</em>.</p>
+
+<h3>Software:</h3>
+
+<h4>Operative system:</h4>
+
+<p>Any major OS (Windows, Linux, OSX) it&#39;s OK, but I <em>won&#39;t</em> be able to help you with any Mac issues. If you want to work with Linux, it&#39;s probably simpler to use the Ubuntu distribution, it&#39;ll make your life easier since there is a ton of information about solving problems or installing software in Ubuntu.</p>
+
+<h4>Requiered Software:</h4>
+
+<p>We will stay within the domain of Open Source Software (OSS) as long of possible. For a macro class, the biggest problem will be using Dynare. Dynare is a wonderful piece of software for working with DSGE models, but you need either MATLAB or Octave to for Dynare to use Dynare. Octave is OSS but it&#39;s a bit less easy to install in Windows and is slower than MATLAB, and that <em>may</em> be important when doing Bayesian estimation in Dynare (because of MCMC).</p>
+
+<p>A central piece in our software bundle is the statistical computing programming language named <strong>R</strong> , and related to it, a very hady working evironment called <strong>RStudio</strong> and reproducible research tool known as <strong>knitr</strong>.</p>
+
+<h3>Reproducible Research</h3>
+
+<p>For practical and ethical reasons, our work should aspire to be <em>reproducible</em> by others. Some steps have been taken in such direction by scientific journals, encouraging or even demanding the electronic submission of data sets and codes used in published articles. But this can be greatly improved. People shouldn&#39;t just run your code (and that&#39;s assuming they have access to the software you chose): they should be able to <strong>understand</strong> it and <strong>evaluate</strong> it. Same goes for your data. Some of the software choices made for this course are based on the idea of making (easier, cheaper) reproducibility an integral part of your work</p>
+
+<h3>Evaluations</h3>
+
+<ul>
+<li><p><strong>The good</strong>: </p>
+
+<ul>
+<li>No midterms or final exams! (solemnes o exámenes): you won&#39;t gamble a big 70% or 80% of your entire semester in just a few hours or writing in a classroom.<br/></li>
+<li>Working in groups: you are encouraged to work in groups of 2 or 3, groups can be very helpful to understand things faster.</li>
+</ul></li>
+<li><p><strong>The bad</strong>: </p>
+
+<ul>
+<li><em>lots and lots</em> of reading, exercises, homeworks and computational projects. There will be no week where you could forget about macro. This class it&#39;s a lot of work and it&#39;s best spread out evenly during the semester.</li>
+<li>Working in groups: free riding and different priorities/schedules can make the experience frustrating at times</li>
+</ul></li>
+<li><p><strong>The ugly</strong>:</p>
+
+<ul>
+<li>What do I know! That&#39;s in the eye of the beholder, isn&#39;t it? But if you ask me, this course is a stunner.</li>
+</ul></li>
+</ul>
+
+<h4>Reading tests</h4>
+
+<ul>
+<li><em>Concise Guide to Macroeconomics</em> , part I</li>
+<li><em>Concise Guide to Macroeconomics</em> , part II and Conclusion</li>
+<li>Pack of papers on macro theory in the aftermath of Financial Crises of 2008-2009</li>
+<li>Smet and Wouters (2007) and Fernandez-Villaverde and Rubio (2010) on medium scale macro models</li>
+</ul>
+
+<h4>Programming assigments</h4>
+
+<p>One advice: you better start loving to code.</p>
+
+<ul>
+<li>Descriptive data reports</li>
+<li>A simple optimization static problem</li>
+<li>Dynamic optimization, linear approximation and simulation</li>
+<li>Non linear approximations</li>
+</ul>
+
+<h4>Math problem sets</h4>
+
+<p>There will be 3 or 4 problem sets designed build up your math skills and knowledge in a progressive manner.</p>
+
+<h4>Work sessions</h4>
+
+<p>I think is wise and helpful to schedule some sessions beyond the regular time slots for this class, where we can meet and work together reading, coding or solving exercises. This will replace the auxiliary sessions (ayudantías).</p>
+
+<h4>Partial evaluation weights</h4>
+
+<p>Simple: every little evaluation have equal weight in your final grade. </p>
+
+</body>
+
+</html>
+

@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title></title>
+
+<base target="_blank"/>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+</head>
+
+<body>
+<p>#Macroeconomic Theory</p>
+
+<p>###Southern Spring 2012 </p>
+
+<ul>
+<li><p>Week 1: </p></li>
+<li><p>Neoclassical growth model (Solow-Swan and Uzawa)</p></li>
+<li><p>Basic stabilization policy models</p></li>
+<li><p>First version: 2012/08/05, this version: 2012/08/05</p></li>
+</ul>
+
+<p>#Solow-Swan model of (neoclassical) economic growth</p>
+
+<ul>
+<li><p>Venerable ancestor of modern DGSE modern models (much to the despair of Bob Solow!)</p></li>
+<li><p>Common ground to talk about the contributions of factors and productivities to output growth</p></li>
+<li><p>Introduces important terms into the sytudent&#39;s vocabulary: total factor productivity, balanced growth path, efficiency units, etc.</p></li>
+<li><p>&hellip; and your first use of ODEs! </p></li>
+</ul>
+
+<p>#Solow-Swan (cont. 2)</p>
+
+<ul>
+<li><p>Relevant measure of capital: absolute, per capita or per efficiency units, determines what can be stationary</p></li>
+<li><p>Key equation is capital accumulation as a function of savings, marginal returns and effective depreciation</p></li>
+<li><p>Nice DE:<br/>
+\[ 
+ \begin{equation}\label{capacc}
+ \dot{k}_t = s f(k_t) - (n+\delta) k_t 
+ \end{equation}
+  \]</p></li>
+</ul>
+
+<p>#Solow-Swan (cont. 3)</p>
+
+<ul>
+<li><p>Homegeneity degree one implies:<br/>
+\[ 
+F_L L +  F_K K = F(K,L)
+ \]</p></li>
+<li><p>prices equal to marginal productivity get us<br/>
+\[ 
+\omega_t L_t + \kappa_t K_t = Y_t
+ \]</p></li>
+</ul>
+
+<p>#Solow-Swan (cont. 4)</p>
+
+<ul>
+<li><p>Example: \( y_t = A k_t^{\alpha} \)</p></li>
+<li><p>ODE: $ \frac{k_t<sup>{1-\alpha}}{d</sup> t} = sA(1-\alpha) - (\delta+n) k<sup>{1-\alpha}_t</sup> (1-\alpha)$    </p></li>
+<li><p>Solution:<br/>
+\[ 
+k_t^{1-\alpha} = \frac{sA}{\delta+n} + \left(k_0^{1-\alpha} -  \frac{sA}{\delta+n}\right) e^{-(1-\alpha)(\delta+n)t}
+ \]</p></li>
+<li><p>Code this solution and compare it across different parameter values</p></li>
+</ul>
+
+<p>#Uzawa model</p>
+
+<ul>
+<li><p>Add human capital, \( H_t \),  same \( \delta \) for simplicity</p></li>
+<li><p>\( Y_t = K_t^{\alpha} H_t^{\beta} (A_t L_t)^{1-\alpha-\beta} \) and let \( \gamma_A := \frac{\dot{A}_t}{A_t} \), and \( \delta \) same for \( K \) and \( H \)</p></li>
+<li><p>In units of  effective labor, \( A_t L_t \):<br/>
+\[ 
+\begin{align}
+\dot{h}_t = & s_H y_t - (n+\gamma+\delta)h_t \\
+h^* = & \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \right)^{1/(1 - \alpha - \beta)}\end{align}
+ \]</p></li>
+</ul>
+
+<p>#Uzawa (cont. 2)<br/>
+ \[ 
+\begin{align}
+\ln \frac{Y_t}{L_t} = & \ln A_0 + \gamma_A t \\ 
+  & + \frac{\alpha}{1-\alpha-\beta} [\ln s_K - \ln (n+\delta+\gamma_A)] \\
+  & + \frac{\beta}{1-\alpha-\beta} [\ln s_H - \ln (n+\delta+\gamma_A)]
+\end{align} 
+ \]</p>
+
+<ul>
+<li>\( \beta = 0 \), \( \frac{\alpha}{1-\alpha}=1.43 \), \( \alpha=0.59 \)</li>
+<li>\( \frac{\alpha}{1-\alpha - \beta}=0.71 \), \( \frac{\beta}{1-\alpha - \beta}=0.74 \), \( \alpha=0.29 \)</li>
+</ul>
+
+</body>
+
+</html>
+
