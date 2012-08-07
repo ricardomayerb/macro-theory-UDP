@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Required Software</title>
+
+<base target="_blank"/>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>Required Software</h1>
+
+<p>You should install the following software:</p>
+
+<h2><strong>R</strong> and <em>RStudio</em></h2>
+
+<p><strong>R</strong> is the language and comes with a functional console and a simple GUI in the case of Windows. But to make your life simpler and to author documents for this class, you&#39;ll be using a wonderful work enviroment for <strong>R</strong>, called RStudio.</p>
+
+<ul>
+<li><p>Go to <a href="http://cran.r-project.org/">http://cran.r-project.org/</a> and follow the download link for your OS (Windows, Linux or MacOS X)</p></li>
+<li><p>Install <strong>R</strong> </p></li>
+<li><p>Go to <a href="http://www.rstudio.org/">http://www.rstudio.org/</a> , download and install RStudio</p></li>
+<li><p>Once installed, open <strong>RStudio</strong> as Administrator (in Windows, right-click on R, then choose the option Run as Administrator; in Linux, do sudo R), go to the <em>Packages</em> tab, click on <em>Install Packages</em> and type <em>ctv</em>. This will install the <em>ctv</em> package. Next, load the package by typing <code>library(ctv)</code> in the Console or by checking the box next to ctv in the Packages list.</p></li>
+<li><p>After loading <code>ctv</code>, type  in the console this command <code>install.views(c(&quot;Econometrics&quot;, &quot;ReproducibleResearch&quot;))</code>. This will install two Task Views. While you computer downloads and installs them, take the time to visit the Task View pages on Cran: <a href="http://cran.r-project.org/web/views/">http://cran.r-project.org/web/views/</a> . In particular, don&#39;t miss to see the pages for Econometrics and Reproducible Research</p></li>
+<li><p>Be thankful for the people behind these Task Views, just go to this page and see how many packages are in Cran!: <a href="http://cran.r-project.org/web/packages/">http://cran.r-project.org/web/packages/</a></p></li>
+<li><p>Familiarize yourself with the existence of R manuals and the help pages for every package. In addition, RStudio comes with a set of nice and concise Docs, and there several video tutorials for both R and RStudio. Take a few minutes to discover some of them. One site worth exploring is <a href="http://www.r-bloggers.com/">http://www.r-bloggers.com/</a></p></li>
+</ul>
+
+<h2><strong>Git</strong> and <strong>Github</strong></h2>
+
+<p>Let me introduce you to a great little thing: Git &hellip; and Github, which is fairly neat, too. In its own words, Git is &ldquo;free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency&rdquo;. Github it&#39;s an internet site with lots of features to make your life easier when working with Git. So you should </p>
+
+<ul>
+<li><p>If you are working on windows, I suggets you download github&#39;s native app and run it to set up everything it&#39;s a breeze: <a href="https://help.github.com/articles/set-up-git#platform-windows">https://help.github.com/articles/set-up-git#platform-windows</a> . If you are in Linux, follow the instructions in <a href="https://help.github.com/articles/set-up-git#platform-linux">https://help.github.com/articles/set-up-git#platform-linux</a></p></li>
+<li><p>Now, go to <a href="https://github.com/ricardomayerb/macro-theory-UDP">https://github.com/ricardomayerb/macro-theory-UDP</a> and just <strong>clone</strong> this repository (macro-theory-udp). This should create new folders in your PC. There is a nice, big, button Clone in Windows, if it applies to you, try it!</p></li>
+</ul>
+
+<p>+</p>
+
+</body>
+
+</html>
+
