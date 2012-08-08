@@ -31,10 +31,7 @@ This a graduate-level textbook. You may sprint through Davis Moss' book, but thi
      
      + Pay attention to Appendix 1.1: *The CES function*. Do not drag any fear of the CES (I know you have it) into the next chapters. Take paper and pencil and derive what the author calls 'input demands' by yourself. Do it for the $N$ inputs case and the continuum case. It's going to appear in a problem set, anyway, so you you might as well do some work in advance. BTW, in this case taking derivatives with respect to $X_i$ inside the integral it's no different than in a simple, discrete summation. When the integration limits depend on  $X$, you might want to review the *Leibniz's rule*.
      
-     $$
-     x^2
-     $$
-     
+
  
 
 
