@@ -1,7 +1,9 @@
 Mathematical Notes, Week 1
 ========================================================
 
+---
 ## ODEs, part I: linear f.o. ODEs and integrating factors
+
 
 Standard form:
 
@@ -11,7 +13,7 @@ $$
 \end{equation}
 $$
 
-Intregratin factor: $IF := e^{\int P(x) dx}$. Use it to multiply both sides of the equation.
+Integrating factor: $IF := e^{\int P(x) dx}$. Use it to multiply both sides of the equation.
 
 
 ### Example 1
@@ -97,3 +99,64 @@ therefore
 \[
 y = \frac{1}{2}(5 x^2 + x^{-2})
 \]
+
+
+---
+## Probability, part I: joint, conditional and marginal
+
+### Example 4a: Bayes theorem, with events of positive probabilities.
+
+As derived result (e.g. Kolmogorov) or as an axiom (e.g. deFinetti) a central piece of your probabilistic tools is the relationship between joint, conditional and marginal probabilities (or densities or expectations).
+
+The fundamental relation is
+
+$$
+\begin{equation}
+P(A \cap B) = P(B|A) ~ P(A) = P(A|B) ~ P(B)
+\end{equation}
+$$
+
+and this implies
+$$
+\begin{equation}
+P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A) ~ P(A)}{P(B)}
+\end{equation}
+$$
+
+and
+$$
+\begin{equation}
+P(B | A) = \frac{P(A \cap B)}{P(A)} = \frac{P(A|B) ~ P(B)}{P(A)}
+\end{equation}
+$$
+
+
+If you want to condition on a third event, $C$, we have
+
+$$
+\begin{equation}
+P(A \cap B | C) = P(B|A, C) ~ P(A | C) = P(A|B, C) ~ P(B | C)
+\end{equation}
+$$
+
+and this implies
+$$
+\begin{equation}
+P(A | B, C) = \frac{P(A \cap B | C)}{P(B | C)} = \frac{P(B|A, C) ~ P(A | C)}{P(B | C)}
+\end{equation}
+$$
+
+and
+$$
+\begin{equation}
+P(B | A, C) = \frac{P(A \cap B | C)}{P(A | C)} = \frac{P(A|B, C) ~ P(B | C)}{P(A | C)}
+\end{equation}
+$$
+
+### Example 4b: Bayes theorem, with events of positive probabilities, numerical examples.
+
+### Example 5: Conditional probabilities on $X$, are functions of $X$!. 
+
+### Example 6: Marginal probabilities respecto to $X$, are functions of anything **but** of $X$!.
+
+### Example 7: More on marginalization, with events of positive probabilities, numerical examples.

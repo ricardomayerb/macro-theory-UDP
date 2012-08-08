@@ -149,6 +149,8 @@ hr {
 <body>
 <h1>Mathematical Notes, Week 1</h1>
 
+<hr/>
+
 <h2>ODEs, part I: linear f.o. ODEs and integrating factors</h2>
 
 <p>Standard form:</p>
@@ -159,7 +161,7 @@ hr {
 \end{equation}
  \]</p>
 
-<p>Intregratin factor: \( IF := e^{\int P(x) dx} \). Use it to multiply both sides of the equation.</p>
+<p>Integrating factor: \( IF := e^{\int P(x) dx} \). Use it to multiply both sides of the equation.</p>
 
 <h3>Example 1</h3>
 
@@ -244,6 +246,66 @@ therefore<br/>
 \[ 
 y = \frac{1}{2}(5 x^2 + x^{-2})
  \]</p>
+
+<hr/>
+
+<h2>Probability, part I: joint, conditional and marginal</h2>
+
+<h3>Example 4a: Bayes theorem, with events of positive probabilities.</h3>
+
+<p>As derived result (e.g. Kolmogorov) or as an axiom (e.g. deFinetti) a central piece of your probabilistic tools is the relationship between joint, conditional and marginal probabilities (or densities or expectations).</p>
+
+<p>The fundamental relation is</p>
+
+<p>\[ 
+\begin{equation}
+P(A \cap B) = P(B|A) ~ P(A) = P(A|B) ~ P(B)
+\end{equation}
+ \]</p>
+
+<p>and this implies<br/>
+\[ 
+\begin{equation}
+P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A) ~ P(A)}{P(B)}
+\end{equation}
+ \]</p>
+
+<p>and<br/>
+\[ 
+\begin{equation}
+P(B | A) = \frac{P(A \cap B)}{P(A)} = \frac{P(A|B) ~ P(B)}{P(A)}
+\end{equation}
+ \]</p>
+
+<p>If you want to condition on a third event, \( C \), we have</p>
+
+<p>\[ 
+\begin{equation}
+P(A \cap B | C) = P(B|A, C) ~ P(A | C) = P(A|B, C) ~ P(B | C)
+\end{equation}
+ \]</p>
+
+<p>and this implies<br/>
+\[ 
+\begin{equation}
+P(A | B, C) = \frac{P(A \cap B | C)}{P(B | C)} = \frac{P(B|A, C) ~ P(A | C)}{P(B | C)}
+\end{equation}
+ \]</p>
+
+<p>and<br/>
+\[ 
+\begin{equation}
+P(B | A, C) = \frac{P(A \cap B | C)}{P(A | C)} = \frac{P(A|B, C) ~ P(B | C)}{P(A | C)}
+\end{equation}
+ \]</p>
+
+<h3>Example 4b: Bayes theorem, with events of positive probabilities, numerical examples.</h3>
+
+<h3>Example 5: Conditional probabilities on \( X \), are functions of \( X \)!.</h3>
+
+<h3>Example 6: Marginal probabilities respecto to \( X \), are functions of anything <strong>but</strong> of \( X \)!.</h3>
+
+<h3>Example 7: More on marginalization, with events of positive probabilities, numerical examples.</h3>
 
 </body>
 
