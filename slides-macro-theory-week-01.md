@@ -88,4 +88,12 @@ $$
 
 # CES functions
 
-+ Ubiquitous
++ Ubiquitous in new-keynesian models (and in economic geography)
+
++ Both continuous and discrete cases
+
++ Don't be intimidated by integrals ... think of sums
+
++ Equivalent forms: 
+
+\[ Y = \left( \Sigma \alpha_i X_i^{\eta} \right)^{1/\eta} \quad \text{or} \quad   Y \left( \Sigma \alpha_i X_i^{\frac{\sigma-1}{\sigma}} \right)^{\frac{\sigma}{\sigma-1}}  \]
