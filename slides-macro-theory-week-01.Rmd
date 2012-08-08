@@ -15,9 +15,9 @@
 
 - Venerable ancestor of modern DGSE modern models (much to the despair of Bob Solow!)
 
-- Common ground to talk about the contributions of factors and productivities to output growth
+- Common ground to talk about the contributions of factors and productivity to output growth
 
-- Introduces important terms into the sytudent's vocabulary: total factor productivity, balanced growth path, efficiency units, etc.
+- Introduces important terms into the student's vocabulary: total factor productivity, balanced growth path, efficiency units, etc.
 
 - ... and your first use of ODEs! 
 
@@ -29,15 +29,15 @@
 + Key equation is capital accumulation as a function of savings, marginal returns and effective depreciation
 
 + Nice DE:
- $$
+$$
  \begin{equation}\label{capacc}
  \dot{k}_t = s f(k_t) - (n+\delta) k_t 
  \end{equation}
- $$
+$$
 
 #Solow-Swan (cont. 3)
 
-+ Homegeneity degree one implies:
++ Homogeneity degree one implies:
 $$
 F_L L +  F_K K = F(K,L)
 $$
@@ -86,4 +86,6 @@ $$
 + $\beta = 0$, $\frac{\alpha}{1-\alpha}=1.43$, $\alpha=0.59$
 + $\frac{\alpha}{1-\alpha - \beta}=0.71$, $\frac{\beta}{1-\alpha - \beta}=0.74$, $\alpha=0.29$
 
+# CES functions
 
++ Ubiquitous
