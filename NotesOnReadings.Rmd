@@ -25,9 +25,11 @@ You should read first half of the book during the first week and the second part
 ------------
 This a graduate-level textbook. You may sprint through Davis Moss' book, but this one is a marathon: pace yourself. Here is a weekly schedule suggested for this class:
 
+
  + Week one: Go over Chapter 1 in one study session. This is just a reminder of things we've already study, so you can cover it in 60 minutes of reading, excluding the Appendix. After the first reading, I suggest you pay extra attention to these parts:
  
      + Go back to section 1.6.3 *Conditional and Unconditional Convergence: an example*. Make sure you understand why equation implies that "after controlling by savings, there is a negative relation between capital and capital growth". Are you comfortable with simple ODEs (ordinary difference equations)?  Does the solution to this equation seems like voodoo to you? If it does, review the first exercises about ODEs in our problem set.
+     
      
      + Pay attention to Appendix 1.1: *The CES function*. Do not drag any fear of the CES (I know you have it) into the next chapters. Take paper and pencil and derive what the author calls 'input demands' by yourself. Do it for the $N$ inputs case and the continuum case. It's going to appear in a problem set, anyway, so you you might as well do some work in advance. BTW, in this case taking derivatives with respect to $X_i$ inside the integral it's no different than in a simple, discrete summation. When the integration limits depend on  $X$, you might want to review the *Leibniz's rule*.
      
