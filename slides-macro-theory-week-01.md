@@ -51,7 +51,7 @@ $$
 
 + Example: $y_t = A k_t^{\alpha}$
 
-+ ODE: $ \frac{k_t^{1-\alpha}}{d t} = sA(1-\alpha) - (\delta+n) k^{1-\alpha}_t (1-\alpha)$    
++ ODE: $\frac{k_t^{1-\alpha}}{d t} = sA(1-\alpha) - (\delta+n) k^{1-\alpha}_t (1-\alpha)$    
 
 + Solution:
 $$
@@ -96,7 +96,9 @@ $$
 
 + Equivalent forms ($\sigma$ is the eslasticity of substitution): 
 
-\[ Y = \left( \Sigma \alpha_i X_i^{\eta} \right)^{1/\eta} \quad \text{or} \quad   Y \left( \Sigma \alpha_i X_i^{\frac{\sigma-1}{\sigma}} \right)^{\frac{\sigma}{\sigma-1}}  \]
+$$
+Y = \left( \Sigma \alpha_i X_i^{\eta} \right)^{1/\eta} \quad \text{or} \quad   Y \left( \Sigma \alpha_i X_i^{\frac{\sigma-1}{\sigma}} \right)^{\frac{\sigma}{\sigma-1}}
+$$
 
 # Math flashmob: Bayes theorem
 
