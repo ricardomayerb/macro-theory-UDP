@@ -94,6 +94,28 @@ $$
 
 + Don't be intimidated by integrals ... think of sums
 
-+ Equivalent forms: 
++ Equivalent forms ($\sigma$ is the eslasticity of substitution): 
 
 \[ Y = \left( \Sigma \alpha_i X_i^{\eta} \right)^{1/\eta} \quad \text{or} \quad   Y \left( \Sigma \alpha_i X_i^{\frac{\sigma-1}{\sigma}} \right)^{\frac{\sigma}{\sigma-1}}  \]
+
+# Math flashmob: Bayes theorem
+
++ Fundamental relation is
+
+$$
+\begin{equation}
+P(A \cap B) = P(B|A) ~ P(A) = P(A|B) ~ P(B)
+\end{equation}
+$$
+
++ Assume $P(A)>0$ and $P(B)>0$:
+
+$$
+\begin{equation}
+P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A) ~ P(A)}{P(B)}
+\end{equation}
+$$
+
++ What to do when dealing with *continuous* random variables
+
++ Conditional probabilities and expectations are functions of the conditioning variable!
