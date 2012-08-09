@@ -4,7 +4,7 @@
   <title></title>
 <style>
   html { background-color: black; }
-  body { background-color: white; }
+  body { background-color: white; border-radius: 12px}
   /* A section is a slide. It's size is 800x600, and this will never change */
   section {
       font-family: Arial, serif;
@@ -23,20 +23,24 @@
   h1 { font-size: 180%; }
   h2 { font-size: 120%; }
   h3 { font-size: 100%; }
+  q { quotes: "“" "”" "‘" "’"; }
   blockquote { font-style: italic }
-  q {
-    display: inline-block;
-    width: 700px;
-    height: 600px;
+  /* Figures are displayed full-page, with the caption on
+     top of the image/video */
+  figure {
     background-color: black;
-    color: white;
-    font-size: 60px;
-    padding: 50px;
+  }
+  figcaption {
+    margin: 70px;
   }
   footer {
     position: absolute;
-    bottom: 10px;
-    right: 20px;
+    bottom: 0;
+    width: 100%;
+    padding: 40px;
+    text-align: right;
+    background-color: #F3F4F8;
+    border-top: 1px solid #CCC;
   }
 
   /* Transition effect */
@@ -73,7 +77,7 @@
 </head>
 <body>
 <section class="slide level1" id="macroeconomic-theory">
-<h1 id="macroeconomic-theory">Macroeconomic Theory</h1>
+<h1>Macroeconomic Theory</h1>
 <h3 id="southern-spring-2012">Southern Spring 2012</h3>
 <ul class="incremental">
 <li><p>Week 1:</p></li>
@@ -83,16 +87,16 @@
 </ul>
 </section>
 <section class="slide level1" id="solow-swan-model-of-neoclassical-economic-growth">
-<h1 id="solow-swan-model-of-neoclassical-economic-growth">Solow-Swan model of (neoclassical) economic growth</h1>
+<h1>Solow-Swan model of (neoclassical) economic growth</h1>
 <ul class="incremental">
 <li><p>Venerable ancestor of modern DGSE modern models (much to the despair of Bob Solow!)</p></li>
-<li><p>Common ground to talk about the contributions of factors and productivities to output growth</p></li>
-<li><p>Introduces important terms into the sytudent’s vocabulary: total factor productivity, balanced growth path, efficiency units, etc.</p></li>
+<li><p>Common ground to talk about the contributions of factors and productivity to output growth</p></li>
+<li><p>Introduces important terms into the student’s vocabulary: total factor productivity, balanced growth path, efficiency units, etc.</p></li>
 <li><p>… and your first use of ODEs!</p></li>
 </ul>
 </section>
 <section class="slide level1" id="solow-swan-cont.-2">
-<h1 id="solow-swan-cont.-2">Solow-Swan (cont. 2)</h1>
+<h1>Solow-Swan (cont. 2)</h1>
 <ul class="incremental">
 <li><p>Relevant measure of capital: absolute, per capita or per efficiency units, determines what can be stationary</p></li>
 <li><p>Key equation is capital accumulation as a function of savings, marginal returns and effective depreciation</p></li>
@@ -100,13 +104,13 @@
  \begin{equation}\label{capacc}
  \dot{k}_t = s f(k_t) - (n+\delta) k_t 
  \end{equation}
- \]</p></li>
+\]</p></li>
 </ul>
 </section>
 <section class="slide level1" id="solow-swan-cont.-3">
-<h1 id="solow-swan-cont.-3">Solow-Swan (cont. 3)</h1>
+<h1>Solow-Swan (cont. 3)</h1>
 <ul class="incremental">
-<li><p>Homegeneity degree one implies: \[
+<li><p>Homogeneity degree one implies: \[
 F_L L +  F_K K = F(K,L)
 \]</p></li>
 <li><p>prices equal to marginal productivity get us \[
@@ -115,7 +119,7 @@ F_L L +  F_K K = F(K,L)
 </ul>
 </section>
 <section class="slide level1" id="solow-swan-cont.-4">
-<h1 id="solow-swan-cont.-4">Solow-Swan (cont. 4)</h1>
+<h1>Solow-Swan (cont. 4)</h1>
 <ul class="incremental">
 <li><p>Example: \(y_t = A k_t^{\alpha}\)</p></li>
 <li><p>ODE: $  = sA(1-) - (+n) k^{1-}_t (1-)$</p></li>
@@ -126,7 +130,7 @@ k_t^{1-\alpha} = \frac{sA}{\delta+n} + \left(k_0^{1-\alpha} -  \frac{sA}{\delta+
 </ul>
 </section>
 <section class="slide level1" id="uzawa-model">
-<h1 id="uzawa-model">Uzawa model</h1>
+<h1>Uzawa model</h1>
 <ul class="incremental">
 <li><p>Add human capital, \(H_t\), same \(\delta\) for simplicity</p></li>
 <li><p>\(Y_t = K_t^{\alpha} H_t^{\beta} (A_t L_t)^{1-\alpha-\beta}\) and let \(\gamma_A := \frac{\dot{A}_t}{A_t}\), and \(\delta\) same for \(K\) and \(H\)</p></li>
@@ -138,7 +142,7 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
 </ul>
 </section>
 <section class="slide level1" id="uzawa-cont.-2">
-<h1 id="uzawa-cont.-2">Uzawa (cont. 2)</h1>
+<h1>Uzawa (cont. 2)</h1>
 <p>\[
 \begin{align}
 \ln \frac{Y_t}{L_t} = &amp; \ln A_0 + \gamma_A t \\ 
@@ -149,6 +153,39 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
 <ul class="incremental">
 <li>\(\beta = 0\), \(\frac{\alpha}{1-\alpha}=1.43\), \(\alpha=0.59\)</li>
 <li>\(\frac{\alpha}{1-\alpha - \beta}=0.71\), \(\frac{\beta}{1-\alpha - \beta}=0.74\), \(\alpha=0.29\)</li>
+</ul>
+</section>
+<section class="slide level1" id="ces-functions">
+<h1>CES functions</h1>
+<ul class="incremental">
+<li><p>Ubiquitous in new-keynesian models (and in economic geography)</p></li>
+<li><p>Both continuous and discrete cases</p></li>
+<li><p>Don’t be intimidated by integrals … think of sums</p></li>
+<li><p>Equivalent forms (\(\sigma\) is the eslasticity of substitution):</p></li>
+</ul>
+<p>[ Y = ( <em>i X_i^{} )^{1/}  Y ( </em>i X_i^{} )^{} ]</p>
+</section>
+<section class="slide level1" id="math-flashmob-bayes-theorem">
+<h1>Math flashmob: Bayes theorem</h1>
+<ul class="incremental">
+<li>Fundamental relation is</li>
+</ul>
+<p>\[
+\begin{equation}
+P(A \cap B) = P(B|A) ~ P(A) = P(A|B) ~ P(B)
+\end{equation}
+\]</p>
+<ul class="incremental">
+<li>Assume \(P(A)&gt;0\) and \(P(B)&gt;0\):</li>
+</ul>
+<p>\[
+\begin{equation}
+P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A) ~ P(A)}{P(B)}
+\end{equation}
+\]</p>
+<ul class="incremental">
+<li><p>What to do when dealing with <em>continuous</em> random variables</p></li>
+<li><p>Conditional probabilities and expectations are functions of the conditioning variable!</p></li>
 </ul>
 </section>
 <!-- {{{{ dzslides core
@@ -165,9 +202,11 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
 #
 -->
 
+<div id="progress-bar"></div>
+
 <!-- Default Style -->
 <style>
-  * { margin: 0; padding: 0; }
+  * { margin: 0; padding: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
   details { display: none; }
   body {
     width: 800px; height: 600px;
@@ -186,6 +225,24 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
   body.loaded { display: block; }
   .incremental {visibility: hidden; }
   .incremental[active] {visibility: visible; }
+  #progress-bar{
+    bottom: 0;
+    position: absolute;
+    -moz-transition: width 400ms linear 0s;
+    -webkit-transition: width 400ms linear 0s;
+    -ms-transition: width 400ms linear 0s;
+    transition: width 400ms linear 0s;
+  }
+  figure {
+    width: 100%;
+    height: 100%;
+  }
+  figure > * {
+    position: absolute;
+  }
+  figure > img, figure > video {
+    width: 100%; height: 100%;
+  }
 </style>
 
 <script>
@@ -194,6 +251,7 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
     idx: -1,
     step: 0,
     slides: null,
+    progressBar : null,
     params: {
       autoplay: "1"
     }
@@ -202,6 +260,7 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
   Dz.init = function() {
     document.body.className = "loaded";
     this.slides = $$("body > section");
+    this.progressBar = $("#progress-bar");
     this.setupParams();
     this.onhashchange();
     this.setupTouchEvents();
@@ -214,6 +273,9 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
       var keyVal = e.split('=');
       Dz.params[keyVal[0]] = decodeURIComponent(keyVal[1]);
     });
+  // Specific params handling
+    if (!+this.params.autoplay)
+      $$.forEach($$("video"), function(v){ v.controls = true });
   }
 
   Dz.onkeydown = function(aEvent) {
@@ -249,6 +311,10 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
     if (aEvent.keyCode == 32) { // space
       aEvent.preventDefault();
       this.toggleContent();
+    }
+    if (aEvent.keyCode == 70) { // f
+      aEvent.preventDefault();
+      this.goFullscreen();
     }
   }
 
@@ -368,6 +434,7 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
         newidx++;
       }
     }
+    this.setProgress(newidx, newstep);
     if (newidx != this.idx) {
       this.setSlide(newidx);
     }
@@ -443,9 +510,9 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
     if (old) {
       old.removeAttribute('aria-selected');
     }
-    var incrementals = this.slides[this.idx - 1].$$('.incremental');
+    var incrementals = $$('.incremental');
     if (this.step <= 0) {
-      incrementals.forEach(function(aNode) {
+      $$.forEach(incrementals, function(aNode) {
         aNode.removeAttribute('active');
       });
       return;
@@ -455,7 +522,7 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
       next.setAttribute('aria-selected', true);
       next.parentNode.setAttribute('active', true);
       var found = false;
-      incrementals.forEach(function(aNode) {
+      $$.forEach(incrementals, function(aNode) {
         if (aNode != next.parentNode)
           if (found)
             aNode.removeAttribute('active');
@@ -469,6 +536,24 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
     }
     return next;
   }
+
+  Dz.goFullscreen = function() {
+    var html = $('html'),
+        requestFullscreen = html.requestFullscreen || html.requestFullScreen || html.mozRequestFullScreen || html.webkitRequestFullScreen;
+    if (requestFullscreen) {
+      requestFullscreen.apply(html);
+    }
+  }
+  
+  Dz.setProgress = function(aIdx, aStep) {
+    var slide = $("section:nth-of-type("+ aIdx +")");
+    if (!slide)
+      return;
+    var steps = slide.$$('.incremental > *').length + 1,
+        slideSize = 100 / (this.slides.length - 1),
+        stepSize = slideSize / steps;
+    this.progressBar.style.width = ((aIdx - 1) * slideSize + aStep * stepSize) + '%';
+  }
   
   Dz.postMsg = function(aWin, aMsg) { // [arg0, [arg1...]]
     aMsg = [aMsg];
@@ -476,12 +561,16 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
       aMsg.push(encodeURIComponent(arguments[i]));
     aWin.postMessage(aMsg.join(" "), "*");
   }
+  
+  function init() {
+    Dz.init();
+    window.onkeydown = Dz.onkeydown.bind(Dz);
+    window.onresize = Dz.onresize.bind(Dz);
+    window.onhashchange = Dz.onhashchange.bind(Dz);
+    window.onmessage = Dz.onmessage.bind(Dz);
+  }
 
-  window.onload = Dz.init.bind(Dz);
-  window.onkeydown = Dz.onkeydown.bind(Dz);
-  window.onresize = Dz.onresize.bind(Dz);
-  window.onhashchange = Dz.onhashchange.bind(Dz);
-  window.onmessage = Dz.onmessage.bind(Dz);
+  window.onload = init;
 </script>
 
 
@@ -519,11 +608,8 @@ h^* = &amp; \left( \frac{s^{\alpha}_K ~ s^{1-\alpha}_H}{n + \gamma_A + \delta} \
     return this.querySelectorAll(aQuery);
   }).bind(document);
 
-  NodeList.prototype.forEach = function(fun) {
-    if (typeof fun !== "function") throw new TypeError();
-    for (var i = 0; i < this.length; i++) {
-      fun.call(this, this[i]);
-    }
+  $$.forEach = function(nodeList, fun) {
+    Array.prototype.forEach.call(nodeList, fun);
   }
 
 </script>
