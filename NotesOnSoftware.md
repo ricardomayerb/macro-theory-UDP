@@ -33,6 +33,7 @@ Let me introduce you to a great little thing: Git ... and Github, which is fairl
     + Use the GitHub Shell (or equivalente, like git bash) that is already installed and follow the instructions from Step 2, in this guide: https://help.github.com/articles/fork-a-repo
     
 + **Establish a connection with my original repo**: Until this step, all the communication will be exclusively between your local copy of your repo and your remote copy of your repo. In order to obtain or contribute files to my repo, you need to add an upstream repository (it signals the ancestor of forked repo). Open a shell in the directory of your local repo macro-theory-UDP and follow the instructions of Step 3, from the same guide as before, https://help.github.com/articles/fork-a-repo
+    + Notice that in the example, you have to use the address of my repo, instead of the one provided as example. The address of my repo is https://github.com/ricardomayerb/macro-theory-UDP.git     You have to copy this EXACTLY.
 
 
 
