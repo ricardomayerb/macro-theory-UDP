@@ -67,7 +67,8 @@ Now, for the particular solution:
 \[
 y(0) =  0 e^{-0} + C e^{0} = C =1
 \]
-therefore the particular solution becomes $y(x) =   x e^{-x} +  e^{-x}$
+
+therefore the particular solution becomes $y(x) =   x e^{-x} +  e^{-x}$.
 
 ### Example 3
 
