@@ -24,12 +24,15 @@ You should install the following software:
 
 Let me introduce you to a great little thing: Git ... and Github, which is fairly neat, too. In its own words, Git is "free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency". Github it's an internet site with lots of features to make your life easier when working with Git. So you should 
 
-+ If you are working on windows, I suggets you download github's native app and run it to set up everything it's a breeze: https://help.github.com/articles/set-up-git#platform-windows . If you are in Linux, follow the instructions in https://help.github.com/articles/set-up-git#platform-linux
++ **Install GIT and GITHUB client** (if it applies). Create an account on GitHub.com. If you are working on Windows (or Mac), I suggets you download github's native app and run it to set up everything it's a breeze: https://help.github.com/articles/set-up-git#platform-windows . If you are in Linux, follow the instructions in https://help.github.com/articles/set-up-git#platform-linux
 
-+ Now, go to https://github.com/ricardomayerb/macro-theory-UDP and just **clone** this repository (macro-theory-udp). This should create new folders in your PC. There is a nice, big, button Clone in Windows, if it applies to you, try it!
++ **FORK my repo!**: Now, go to https://github.com/ricardomayerb/macro-theory-UDP and just **FORK** this repository (macro-theory-UDP). There is a button called Fork. Click on it. In this way, a repository with identical name (macro-theory-UDP) but in YOUR online github account.
 
++ **"Download"** (clone, really) **your forked version (appearing in your account) to your PC**: add the end of this step, it should create a folder under Documentos/GitHub/ in your PC with all the files of your newly created remote repository (which right now is just a copy of what I had when you forked my repo). For this step you have to options:
+    + If you have the GitHub client installed, it should detect all your remote repositories in github (that's why, when you first installed this client, it asked you for your username and password). It should show you local repsoitories and github repositories. If you click on github repositories, you should see a CLONE option written in blue. Click on it and it will start downloading all files from your remote repo.
+    + Use the GitHub Shell (or equivalente, like git bash) that is already installed and follow the instructions from Step 2, in this guide: https://help.github.com/articles/fork-a-repo
+    
++ **Establish a connection with my original repo**: Until this step, all the communication will be exclusively between your local copy of your repo and your remote copy of your repo. In order to obtain or contribute files to my repo, you need to add an upstream repository (it signals the ancestor of forked repo). Open a shell in the directory of your local repo macro-theory-UDP and follow the instructions of Step 3, from the same guide as before, https://help.github.com/articles/fork-a-repo
 
-
-+
 
 
