@@ -50,3 +50,16 @@ the profit maximization implies
 \frac{X_i}{Y} = \left( \frac{P_i}{P}  \right)^{-1/(1-\eta)} 
 \]
 
+## Exercise 4: conditioning and marginalizing 
+
++ joint density x,y: bayes rule for f(x|y)
++ joint density x,y,z: bayes rule for f(x|y,z)
+
+## Exercise 5: Chain rule
++ small concrete
++ small abstract
++ larger concrete
+
+# Exercise 6: Difference and differential stability
+
+# Exercise 7: Summation and lag operators.
