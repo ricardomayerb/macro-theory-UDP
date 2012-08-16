@@ -66,7 +66,7 @@ the profit maximization implies
 ## Exercise 5: Chain rule
 + Let $z_t := Ln Z_t$ be a function of $Z_t$, and let $Z_t$ be a function of time, $t$. Use the chain rule to obtain an expression for $\dfrac{\partial z_t}{\partial t}$ in terms of $Z_t$ and $\dot{Z}_t$.
 + Let $y=f(z)$, $z=h(x)$. Use the chain rule to obtain an expression for  $\dfrac{\partial y}{\partial x}$
-+ Let $y=f(z)$, $z=(z_1,z_2,z_3)$, $z_i=h(x)$, $x=(x_1,x_2)$. Use the chain rule to obtain an expression for  $\dfrac{\partial y}{\partial x}$
++ Let $y=f(z)$, $z=(z_1,z_2,z_3)$, $z_i=h(x)$, $x=(x_1,x_2)$. Use the chain rule to obtain an expression for  $\dfrac{\partial y}{\partial x_2}$.
 
 # Exercise 6: Difference and differential stability
 
