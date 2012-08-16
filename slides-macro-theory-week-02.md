@@ -59,3 +59,29 @@
 - $\dot{\pi^e_t} =  \vartheta(\dot{p}_t - \pi_t^e)$
 - $\dot{\pi^e_t} =   -\frac{\vartheta}{1+\xi}(\pi_t^e - \pi^*)  + \frac{\vartheta \phi \xi^2 }{(1+\xi)^2} (\aleph_t - \aleph^*)$
 - write it in matrix form: $\dot{x}_t = A x_t$ and look at the roots of the characteristic polynomial of $A$.
+
+#Stability
+
++ **Eigenvalues**: roots of the characteristic equation
+
++ For systems of differential equations, we need real part to be negative
+
++ For difference equations, we need $|\lambda| < 1$.
+
+#Policy efectiveness
+
+-  $y_t = m_t - p_t + \epsilon_t$
+-   $y_t = \xi (p_t - w_t)$
+- $w_t = p^e_t + \omega$
+- $\omega$ is a 'target' real wage
+- $y_t = y^* + \xi(p_t)$, with $y^* = - \omega \xi$
+- Gov tries to minimize $E(y_t - \bar{y})^2$
+- $(1+\xi)y_t = y^* + \xi (m_t - p^e_t) + \xi \epsilon_t$
+- $(1+\xi)\bar{y} = y^* + \xi (m_t - p^e_t)$
+
+# Policy Effectiveness 2
+- $m_t = p^e_t + \bar{y} + \frac{\bar{y} - y^*}{\xi}$
+- $y_t = \bar{y} + \frac{\xi \epsilon_t}{1 + \xi}$
+- $p_t - p_t^e = \frac{\bar{y}-y^*}{\xi} + \frac{\epsilon_t}{1+\xi}$
+- Next steps: diffent models for $p_t^e$.
+
