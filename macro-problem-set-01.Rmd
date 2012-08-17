@@ -3,9 +3,9 @@ Problem Set 1
 
 ## Instructions
 
-0. Deadline: 23-August-2012
+0. Deadline: Thursday, 23-August-2012
 
-1. You don't have to type your answers, handwriting it's perfectly acceptable and even preferible in a first pass. Later, I'll ask you and your classmates to produce a properly written solution, in $\mathrm{\LaTeX}$.
+1. You don't have to type your answers, handwriting it's perfectly acceptable and even preferable in a first pass. Later, I'll ask you and your classmates to produce a properly written solution, in $\mathrm{\LaTeX}$.
 
 2. It's OK (it's encouraged, even) to work in pairs or groups. But you need to submit individual set of answers and it shouldn't be identical.
 
@@ -63,8 +63,8 @@ the profit maximization implies
 
 ## Exercise 4: conditioning and marginalizing 
 
-+ 4.1 Write down bayes rule for $f_{X|Y}(x|y)$ 
-+ 4.2 Write down bayes rule for $f_{X|Y,Z}(x|y,z)$, maintaining the conditioning on $Z=z$.
++ 4.1 Write down Bayes rule for $f_{X|Y}(x|y)$ 
++ 4.2 Write down Bayes rule for $f_{X|Y,Z}(x|y,z)$, maintaining the conditioning on $Z=z$.
 + 4.3 Show how  can you obtain $f(x,y)$ using only $f(x,y,z$) or using together $f_{Y,X|Z}(x,y|z)$ and $f_{Z}(z)$. 
 + 4.4 Suppose that $x$ and $y$ have a joint distribution that is uniform. The support of the joint distribution is given by $\{(x,y): x \in (0,y), y \in (0,1)\}$.
    - Draw a diagram showing the support of $f(x,y)$.
