@@ -78,8 +78,19 @@ $$
 
    + Find the eigenvalues of $A$ using the characteristic equation
    
-- Write the system of equations on $(\dot{\aleph}_t, \dot{\pi}^e_t)$   
+- Consider the system of equations on $(\dot{\aleph}_t, \dot{\pi}^e_t)$ that appear in Chapter 2, section 2.5.
+    + Write it in matrix form
+    + Write the characteristic polynomial
+    + Write the solutions to the characteristic equations
+    
+- What is the condition for the local stability of the steady state in a system of differential equations?
+
+- What is the condition for the local stability of the steady state in a system of difference equations?
 
 
 
 # Exercise 7: Summation and lag operators.
++ If $|\beta|<1$ what is the value of $\sum_{i=0}^\infty \beta^i$
++ Let $\mathcal{L}$ be the lag operator. If $|\lambda|<1$ what is the value of $\sum_{i=0}^\infty (\lambda \mathcal{L})^i = \sum_{i=0}^\infty \lambda^i \mathcal{L}^i$ ?
++ If $|\mu|<1$ what is the value of $\sum_{i=0}^\infty (\mu \mathcal{L}^{-1})^i = \sum_{i=0}^\infty \mu^i \mathcal{L}^{-i}$ ?
++ Why $\dfrac{D z_t}{1 -\mu \mathcal{L}^{-1}} = \sum_{j=0}^{\infty} D \mu^{j} E_t[z_{t+j}]$ ? 
