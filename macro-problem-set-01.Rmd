@@ -70,9 +70,4 @@ the profit maximization implies
 
 # Exercise 6: Difference and differential stability
 
-+ Finda, manually, the eigenvalues of matrix $A$, below: 
-$$
-A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
-$$
-
 # Exercise 7: Summation and lag operators.
