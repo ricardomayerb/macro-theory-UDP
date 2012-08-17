@@ -1,6 +1,17 @@
 Problem Set 1
 ========================================================
 
+## Instructions
+
+0. Deadline: 23-August-2012
+
+1. You don't have to type your answers, handwriting it's perfectly acceptable and even preferible in a first pass. Later, I'll ask you and your classmates to produce a properly written solution, in $\mathrm{\LaTeX}$.
+
+2. It's OK (it's encouraged, even) to work in pairs or groups. But you need to submit individual set of answers and it shouldn't be identical.
+
+3. Your grade is the grade of the answer sheet you submitted ... subject to an important contingency: after the deadline is met, I'll take a short quiz for everyone, with one of the questions featured in the problem set and I'll grade it. *If you score a red grade* then it will become your final grade for the entire problem set. So say that you submitted your Problem Set 2, and you got a 5.8 grade. But if later I ask you **one** question of the same PS 2, and you do it poorly and get a 3.1 grade, then 3.1 becomes your final grade for PS 2 is . But if you score a 6.5 in the quiz, then your 5.8 stays as the definitive grade.
+
+
 ## Exercise 1: Solow-Swan's differential equation
 
 Let's solve, for the Cobb-Douglas case, the differential equation that describes the dynamics of (per capita) capital accumulation. If the production function is given by $Y_t = A K_t^\alpha L_t^{1-\alpha}$, and in per capita terms by $y_t = A k_t^{\alpha}$, then the DE is :
