@@ -70,9 +70,16 @@ the profit maximization implies
 
 # Exercise 6: Difference and differential stability
 
-+ Finda, manually, the eigenvalues of matrix $A$, below: 
+- Consider the matrix $A$, below:
 $$
 A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
 $$
+   + Write down the characteristic polynomial of matrix $A$: 
+
+   + Find the eigenvalues of $A$ using the characteristic equation
+   
+- Write the system of equations on $(\dot{\aleph}_t, \dot{\pi}^e_t)$   
+
+
 
 # Exercise 7: Summation and lag operators.
