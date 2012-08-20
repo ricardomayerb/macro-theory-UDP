@@ -83,7 +83,7 @@
 <li><p>Week 2:</p></li>
 <li><p>Output, inflation and stabilization</p></li>
 <li><p>static models: K-cross, IS-LM, AD-AS</p></li>
-<li><p>First version: 2012/08/12, this version: 2012/08/12</p></li>
+<li><p>First version: 2012/08/12, this version: 2012/08/19</p></li>
 </ul>
 </section>
 <section class="slide level1" id="undergrad-staples">
@@ -160,8 +160,93 @@
 <ul class="incremental">
 <li>\(m_t = p^e_t + \bar{y} + \frac{\bar{y} - y^*}{\xi}\)</li>
 <li>\(y_t = \bar{y} + \frac{\xi \epsilon_t}{1 + \xi}\)</li>
-<li>\(p_t - p_t^e = \frac{\bar{y}-y^*}{\xi} + \frac{\epsilon_t}{1+\xi}\)</li>
-<li>Next steps: diffent models for \(p_t^e\).</li>
+<li>\(p_t - p_t^e = \frac{\bar{y}-y^*}{\xi} + \frac{\epsilon_t}{1+\xi}\) (key equation)</li>
+<li>Next steps: different models for \(p_t^e\).</li>
+</ul>
+</section>
+<section class="slide level1" id="static-price-expectations">
+<h1>Static <em>price</em> expectations</h1>
+<ul class="incremental">
+<li>\(p_t^e = p_{t-1}\)</li>
+<li>\(\pi_t = p_t - p_{t-1} = \frac{\bar{y}-y^*}{\xi} + \frac{\epsilon_t}{1+\xi}\)</li>
+<li>But if sistematically \(\pi_t&gt;0\) , then \(p_t^e = p_{t-1}\) is not reasonable (bc expects zero inflation)</li>
+</ul>
+</section>
+<section class="slide level1" id="static-inflation-expectations">
+<h1>Static <em>inflation</em> expectations</h1>
+<ul class="incremental">
+<li>\(\pi_t^e = \pi_{t-1}\)</li>
+<li>equiv, \(p_t^e = p_{t-1} + \pi_{t-1}\)</li>
+<li>\(\pi_t = \pi_{t-1} \frac{\bar{y}-y^*}{\xi} + \frac{\epsilon_t}{1+\xi}\)</li>
+<li>To sustain a higer level \(\bar{y}\) it needs to produce permanent increaments of inflation!</li>
+<li>… and agents are still making systematic expectational mistakes</li>
+</ul>
+</section>
+<section class="slide level1" id="perfect-foresight">
+<h1>Perfect foresight</h1>
+<ul class="incremental">
+<li>\(p^e_t = p_t\)</li>
+<li>if \(\epsilon_t=0\): \[
+   y_t = m_t - p_t
+   \] and \[
+   y_t = y_t^* + \xi(p_t-p^e_t)
+   \]</li>
+<li>Therefore, \(y_t = y^*\) and \(p_t=m_t - y^*\)</li>
+<li>One will never be able to do better on average that the natural rate of activity \(y^*\)</li>
+<li>Monetary policy only influences prices, not output</li>
+</ul>
+</section>
+<section class="slide level1" id="example-imperfect-info-and-choice-of-instruments">
+<h1>Example: Imperfect info and choice of instruments</h1>
+<ul class="incremental">
+<li>IS-LM log-linearized version: \[
+    \begin{align}
+    y_t &amp; =  -b i_t + \epsilon_t \\
+    m_t &amp; - p_t -y_t = -c i_t -v_t
+    \end{align}
+    \]</li>
+<li>\(\epsilon_t\) is a real demand shock and \(v_t\) is money velocity shock<br></li>
+<li>Under <strong>full info</strong>: \[
+    \begin{align}
+    i_t &amp; =  \frac{\epsilon_t}{b} \\
+    m_t - p_t &amp; = -\frac{c}{b} \epsilon_t - v_t
+    \end{align}
+    \]</li>
+</ul>
+</section>
+<section class="slide level1" id="optimal-policy-under-imperfect-info">
+<h1>Optimal policy under imperfect info</h1>
+<ul class="incremental">
+<li>Gov do not observe \(y_t,\epsilon_t,v_t,p_t\)</li>
+<li>Does observe \(m_t, i_t\)</li>
+<li>family of monetary policies: \(m_t = \chi i_t\)</li>
+<li>Set \(\chi=0\) if you want \(m_t\) to be unmoved by \(i_t\)</li>
+<li>Set \(\dfrac{1}{\chi}=0\) if you want \(i_t\) to be unmoved by \(m_t\)</li>
+<li>IS,LM and policy implies \[
+    y_t = \frac{(\chi+c)\epsilon_t + b v_t}{\chi + c +b}
+    \]</li>
+</ul>
+</section>
+<section class="slide level1" id="optimal-policy-under-imperfect-info-2">
+<h1>Optimal policy under imperfect info, 2</h1>
+<ul class="incremental">
+<li>Variance of \(y_t\) as a function of \(\chi\): \[
+    \text{Var}(y_t) = \frac{(\chi+c)^2\sigma^2_{\epsilon} + b^2 \sigma_{v}^2}{(\chi + c +b)^2}
+  \]</li>
+<li>Option 1: \(\chi=0\), option 2: \(\chi=\infty\) \[
+    \text{V}_m = \frac{c^2\sigma^2_{\epsilon} + b^2 \sigma_{v}^2}{(c +b)^2}, \quad \text{V}_i = \sigma_v^2
+  \]</li>
+</ul>
+</section>
+<section class="slide level1" id="optimal-policy-under-imperfect-info-3">
+<h1>Optimal policy under imperfect info, 3</h1>
+<ul class="incremental">
+<li>Setting quantity of money is better than setting interest if \[
+    b\sigma_v^2 &lt; (2c + b)\sigma_{\epsilon}^2
+  \]</li>
+<li><em>optimal</em> value of \(\chi\), call it \(\chi^*\), minimizes \(Var(y_t)\): \[
+  \chi^* = \frac{b \sigma_{v}^2}{\sigma_{\epsilon}^2} - c
+  \]</li>
 </ul>
 </section>
 <!-- {{{{ dzslides core
