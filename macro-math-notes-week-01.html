@@ -12,8 +12,8 @@
 <style type="text/css">
 body, td {
    font-family: sans-serif;
-   background-color: LightGray;
-   font-size: 16px;
+   background-color: white;
+   font-size: 12px;
    margin: 8px;
 }
 
@@ -133,6 +133,7 @@ hr {
       page-break-after: avoid; 
    }
 }
+
 </style>
 
 
@@ -140,6 +141,7 @@ hr {
 <!-- MathJax scripts -->
 <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
+
 
 
 </head>
@@ -153,98 +155,98 @@ hr {
 
 <p>Standard form:</p>
 
-<p>\[<br/>
-\begin{equation}\label{folstandardform}<br/>
-\frac{d y}{d x} + P(x) y = Q(x)<br/>
-\end{equation}<br/>
-\]</p>
+<p>\[ 
+\begin{equation}\label{folstandardform}
+\frac{d y}{d x} + P(x) y = Q(x)
+\end{equation}
+ \]</p>
 
-<p>Integrating factor: \(IF := e^{\int P(x) dx}\). Use it to multiply both sides of the equation.</p>
+<p>Integrating factor: \( IF := e^{\int P(x) dx} \). Use it to multiply both sides of the equation.</p>
 
 <h3>Example 1</h3>
 
-<p>\[<br/>
-\begin{equation}\label{odeexample1}<br/>
-\frac{dy}{dx} + y = x, \qquad y(0)=0<br/>
-\end{equation}<br/>
-\]</p>
+<p>\[ 
+\begin{equation}\label{odeexample1}
+\frac{dy}{dx} + y = x, \qquad y(0)=0
+\end{equation}
+ \]</p>
 
-<p>Here \(P(x)\) is simply 1, then \(IF=e^{\int 1 dx} = e^{x}\), so the equation becomes</p>
+<p>Here \( P(x) \) is simply 1, then \( IF=e^{\int 1 dx} = e^{x} \), so the equation becomes</p>
 
-<p>\[<br/>
-\begin{align*}<br/>
-\frac{dy}{dx} e^{x} + e^{x} y = & x e^{x} \<br/>
-\frac{d \left(y e^{x} \right)}{dx}   = & x e^{x} \<br/>
-\int \frac{d \left(y e^{x} \right)}{dx} dx   = & \int x e^{x} dx \<br/>
-y e^{x}    = & \int x e^{x} dx \<br/>
-y e^{x}    = &   e^{x} x - e^{x} + C \qquad \text{(integration by parts)} \<br/>
-y(x) = &   x - 1 + C e^{-x}  \<br/>
-\end{align*}<br/>
-\]</p>
+<p>\[ 
+\begin{align*}
+\frac{dy}{dx} e^{x} + e^{x} y = & x e^{x} \\
+\frac{d \left(y e^{x} \right)}{dx}   = & x e^{x} \\
+\int \frac{d \left(y e^{x} \right)}{dx} dx   = & \int x e^{x} dx \\
+y e^{x}    = & \int x e^{x} dx \\
+y e^{x}    = &   e^{x} x - e^{x} + C \qquad \text{(integration by parts)} \\
+y(x) = &   x - 1 + C e^{-x}  \\
+\end{align*}
+ \]</p>
 
-<p>That&#39;s the general solution. Next, we find the particular solution implied by \(y(0)=0\):</p>
+<p>That&#39;s the general solution. Next, we find the particular solution implied by \( y(0)=0 \):</p>
 
-<p>\[<br/>
- y(0) = 0 - 1 + C e^{-0} = -1+C = 0  <br/>
-\]<br/>
-which implies that \(C=1\) and therefore \(y(x) =   x - 1 +  e^{-x}\) is our particular solution.</p>
+<p>\[ 
+ y(0) = 0 - 1 + C e^{-0} = -1+C = 0  
+ \]<br/>
+which implies that \( C=1 \) and therefore \( y(x) =   x - 1 +  e^{-x} \) is our particular solution.</p>
 
 <h3>Example 2</h3>
 
-<p>\[<br/>
-\begin{equation}\label{odeexample2}<br/>
-\frac{dy}{dx} + y = e^{-x}, \qquad y(0)=1<br/>
-\end{equation}<br/>
-\]</p>
+<p>\[ 
+\begin{equation}\label{odeexample2}
+\frac{dy}{dx} + y = e^{-x}, \qquad y(0)=1
+\end{equation}
+ \]</p>
 
-<p>This has the same P(x) and hence the same integrating factor \(IF=e^{x}\). So we proceed this way:<br/>
-\[<br/>
-\begin{align*}<br/>
-\frac{dy}{dx} e^{x} + e^{x} y = & e^{-x} e^{x} \<br/>
-\frac{d \left(y e^{x} \right)}{dx}   = &  1 \<br/>
-\int \frac{d \left(y e^{x} \right)}{dx} dx   = & \int 1 dx \<br/>
-y e^{x}    = &   x + C  \<br/>
-y(x) = &   x e^{-x} + C e^{-x}  \<br/>
-\end{align*}<br/>
-\]</p>
+<p>This has the same P(x) and hence the same integrating factor \( IF=e^{x} \). So we proceed this way:<br/>
+\[ 
+\begin{align*}
+\frac{dy}{dx} e^{x} + e^{x} y = & e^{-x} e^{x} \\
+\frac{d \left(y e^{x} \right)}{dx}   = &  1 \\
+\int \frac{d \left(y e^{x} \right)}{dx} dx   = & \int 1 dx \\
+y e^{x}    = &   x + C  \\
+y(x) = &   x e^{-x} + C e^{-x}  \\
+\end{align*}
+ \]</p>
 
 <p>Now, for the particular solution:<br/>
-\[<br/>
-y(0) =  0 e^{-0} + C e^{0} = C =1<br/>
-\]</p>
+\[ 
+y(0) =  0 e^{-0} + C e^{0} = C =1
+ \]</p>
 
-<p>therefore the particular solution becomes \(y(x) =   x e^{-x} +  e^{-x}\).</p>
+<p>therefore the particular solution becomes \( y(x) =   x e^{-x} +  e^{-x} \).</p>
 
 <h3>Example 3</h3>
 
-<p>\[<br/>
-\begin{equation}\label{odeexample3}<br/>
-x \frac{dy}{dx} + 2 y = 10 x^2, \qquad y(1)=3<br/>
-\end{equation}<br/>
-\]</p>
+<p>\[ 
+\begin{equation}\label{odeexample3}
+x \frac{dy}{dx} + 2 y = 10 x^2, \qquad y(1)=3
+\end{equation}
+ \]</p>
 
 <p>First, get it to standard form<br/>
-\[<br/>
- \frac{dy}{dx} + \frac{2}{x} y = 10 x<br/>
-\]<br/>
-where \(P(x)=\frac{2}{x}\) . The integrating factor is \(IF = e^{2 \int \frac{1}{x} dx } =  e^{2 \ln(x)}=e^{ \ln(x^2)}= x^2\). Let&#39;s find the general solution:</p>
+\[ 
+ \frac{dy}{dx} + \frac{2}{x} y = 10 x
+ \]<br/>
+where \( P(x)=\frac{2}{x} \) . The integrating factor is \( IF = e^{2 \int \frac{1}{x} dx } =  e^{2 \ln(x)}=e^{ \ln(x^2)}= x^2 \). Let&#39;s find the general solution:</p>
 
-<p>\[<br/>
-\begin{align}<br/>
-x^2 y = & \int x^2 10 x dx  \<br/>
-x^2 y = & 10 \frac{1}{4} x^4  \<br/>
-x^2 y = & \frac{10}{4} x^4 + C \<br/>
-y = & \frac{5}{2} x^2 + C x^{-2}<br/>
-\end{align}<br/>
-\]<br/>
-Finally the particular solition implied by \(y(1)=3\):<br/>
-\[<br/>
-y(1) = \frac{5}{2} + C = 3 \Rightarrow C = \frac{1}{2}<br/>
-\]<br/>
+<p>\[ 
+\begin{align}
+x^2 y = & \int x^2 10 x dx  \\
+x^2 y = & 10 \frac{1}{4} x^4  \\
+x^2 y = & \frac{10}{4} x^4 + C \\
+y = & \frac{5}{2} x^2 + C x^{-2}
+\end{align}
+ \]<br/>
+Finally the particular solition implied by \( y(1)=3 \):<br/>
+\[ 
+y(1) = \frac{5}{2} + C = 3 \Rightarrow C = \frac{1}{2}
+ \]<br/>
 therefore<br/>
-\[<br/>
-y = \frac{1}{2}(5 x^2 + x^{-2})<br/>
-\]</p>
+\[ 
+y = \frac{1}{2}(5 x^2 + x^{-2})
+ \]</p>
 
 <hr/>
 
@@ -256,56 +258,57 @@ y = \frac{1}{2}(5 x^2 + x^{-2})<br/>
 
 <p>The fundamental relation is</p>
 
-<p>\[<br/>
-\begin{equation}<br/>
-P(A \cap B) = P(B|A) ~ P(A) = P(A|B) ~ P(B)<br/>
-\end{equation}<br/>
-\]</p>
+<p>\[ 
+\begin{equation}
+P(A \cap B) = P(B|A) ~ P(A) = P(A|B) ~ P(B)
+\end{equation}
+ \]</p>
 
 <p>and this implies<br/>
-\[<br/>
-\begin{equation}<br/>
-P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A) ~ P(A)}{P(B)}<br/>
-\end{equation}<br/>
-\]</p>
+\[ 
+\begin{equation}
+P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A) ~ P(A)}{P(B)}
+\end{equation}
+ \]</p>
 
 <p>and<br/>
-\[<br/>
-\begin{equation}<br/>
-P(B | A) = \frac{P(A \cap B)}{P(A)} = \frac{P(A|B) ~ P(B)}{P(A)}<br/>
-\end{equation}<br/>
-\]</p>
+\[ 
+\begin{equation}
+P(B | A) = \frac{P(A \cap B)}{P(A)} = \frac{P(A|B) ~ P(B)}{P(A)}
+\end{equation}
+ \]</p>
 
-<p>If you want to condition on a third event, \(C\), we have</p>
+<p>If you want to condition on a third event, \( C \), we have</p>
 
-<p>\[<br/>
-\begin{equation}<br/>
-P(A \cap B | C) = P(B|A, C) ~ P(A | C) = P(A|B, C) ~ P(B | C)<br/>
-\end{equation}<br/>
-\]</p>
+<p>\[ 
+\begin{equation}
+P(A \cap B | C) = P(B|A, C) ~ P(A | C) = P(A|B, C) ~ P(B | C)
+\end{equation}
+ \]</p>
 
 <p>and this implies<br/>
-\[<br/>
-\begin{equation}<br/>
-P(A | B, C) = \frac{P(A \cap B | C)}{P(B | C)} = \frac{P(B|A, C) ~ P(A | C)}{P(B | C)}<br/>
-\end{equation}<br/>
-\]</p>
+\[ 
+\begin{equation}
+P(A | B, C) = \frac{P(A \cap B | C)}{P(B | C)} = \frac{P(B|A, C) ~ P(A | C)}{P(B | C)}
+\end{equation}
+ \]</p>
 
 <p>and<br/>
-\[<br/>
-\begin{equation}<br/>
-P(B | A, C) = \frac{P(A \cap B | C)}{P(A | C)} = \frac{P(A|B, C) ~ P(B | C)}{P(A | C)}<br/>
-\end{equation}<br/>
-\]</p>
+\[ 
+\begin{equation}
+P(B | A, C) = \frac{P(A \cap B | C)}{P(A | C)} = \frac{P(A|B, C) ~ P(B | C)}{P(A | C)}
+\end{equation}
+ \]</p>
 
 <h3>Example 4b: Bayes theorem, with events of positive probabilities, numerical examples.</h3>
 
-<h3>Example 5: Conditional probabilities on \(X\), are functions of \(X\)!.</h3>
+<h3>Example 5: Conditional probabilities on \( X \), are functions of \( X \)!.</h3>
 
-<h3>Example 6: Marginal probabilities respecto to \(X\), are functions of anything <strong>but</strong> of \(X\)!.</h3>
+<h3>Example 6: Marginal probabilities respecto to \( X \), are functions of anything <strong>but</strong> of \( X \)!.</h3>
 
 <h3>Example 7: More on marginalization, with events of positive probabilities, numerical examples.</h3>
 
 </body>
 
 </html>
+
