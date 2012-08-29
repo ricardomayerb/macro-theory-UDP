@@ -48,4 +48,30 @@ $$
 
 - price in $t$ depends on *all* shocks, present and past.
 
-# Muth model 1961: rational expec
+# Muth model 1961: rational expectations
+
+- What is $E_{t-1}p_t$? Apply lagged expectation to market equilibrium:
+$$
+cp^e_t =  a - b p^e_t 
+$$
+
+- $p^e_t = \dfrac{a}{b+c}$ 
+
+- $p_t = \dfrac{a}{b+c} + \dfrac{\epsilon_t}{b}$. Only current shock matters.
+
+- Stable, even if $c>b$
+
+# Expectations and stability: Cagan model, original
+
+- $m_t^d - p_t = -\alpha \pi_t^e$ and $m_t$ - p_t = -alpha \pi_t^e$, by market equilibrium
+
+- Monetary molicy: $m_t = \mu$
+
+- Differentiating, gives
+$$
+\alpha \dot{\pi}_t^e = \pi_t - \mu 
+$$
+  
+
+- Adaptative expec in Cagan's model:  $\dot{\pi}_t^e = $
+
