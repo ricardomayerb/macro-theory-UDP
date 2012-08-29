@@ -100,7 +100,7 @@ $$
 # Cagan a la Sargent \& Wallace, 2
 
 - $$
- p_t  = e^{-t/\alpha} \left[ p_0 - \frac{1}{\alpha} \int_0^t e^{-s/\alpha} m_s ds\right]
+ p_t  = e^{t/\alpha} \left[ p_0 - \frac{1}{\alpha} \int_0^t e^{-s/\alpha} m_s ds\right]
 $$
 
 - $$
