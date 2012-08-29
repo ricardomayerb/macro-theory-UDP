@@ -63,9 +63,9 @@ $$
 
 # Expectations and stability: Cagan model, original
 
-- $m_t^d - p_t = -\alpha \pi_t^e$ and $m_t$ - p_t = -alpha \pi_t^e$, by market equilibrium
+- $m_t^d - p_t = -\alpha \pi_t^e$ and $m_t - p_t = -\alpha \pi_t^e$, by market equilibrium
 
-- Monetary molicy: $m_t = \mu$
+- Monetary policy: $m_t = \mu$
 
 - Differentiating, gives
 $$
@@ -73,5 +73,44 @@ $$
 $$
   
 
-- Adaptative expec in Cagan's model:  $\dot{\pi}_t^e = $
+- Adaptative expec in Cagan's model:  $\dot{\pi}_t^e = \vartheta (\pi_t - \pi_t^e)$
 
+# Original CM, contd
+
+- $\pi_t = \dfrac{\mu - \alpha \vartheta \pi^e_t}{1-\alpha \vartheta}$
+
+- $\dot{\pi}_t^e = \dfrac{\vartheta}{1-\alpha \vartheta} (\mu - \pi_t^e)$
+
+- $\dot{\pi}_t = -\dfrac{\vartheta}{1-\alpha \vartheta} (\pi_t -\mu)$. Steady state is $\mu$
+
+- Inflation will converge to $\mu$ if $\alpha \vartheta < 1$. Otherwise diverge. Hyperinflation.
+
+# Cagan a la Sargent \& Wallace
+
+- $-\alpha \dfrac{d p_t}{t} = m_t - p_t$ can be rewritten as 
+$$
+\frac{d \left( e^{- t/\alpha}  ~ p_t \right)}{d t} = - \frac{1}{\alpha} e^{-t/\alpha} m_t
+$$
+
+- This integrates to 
+$$
+e^{-t/\alpha} p_t - p_0 =  - \frac{1}{\alpha} \int_0^t e^{-s/\alpha} m_s ds
+$$
+
+# Cagan a la Sargent \& Wallace, 2
+
+- $$
+ p_t  = e^{-t/\alpha} \left[ p_0 - \frac{1}{\alpha} \int_0^t e^{-s/\alpha} m_s ds\right]
+$$
+
+- $$
+ p_0  =  \frac{1}{\alpha} \int_0^\infty e^{-s/\alpha} m_s ds
+$$
+
+- $$
+ p_t  =  \frac{1}{\alpha} \int_t^\infty e^{-(s-t)/\alpha} m_s ds
+$$
+
+# Cagan a la Sargent \& Wallace, 3
+
+- Experiment: at date $t_0$ is announced that money will jump from $M_0$ to $\delta M_0$ with $\delta>1$. This new policy will start at date $t_0 + \theta$. What is the evolution of aggregate price level?

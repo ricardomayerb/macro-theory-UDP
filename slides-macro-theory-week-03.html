@@ -131,12 +131,52 @@ cp^e_t =  a - b p^e_t
 <section class="slide level1" id="expectations-and-stability-cagan-model-original">
 <h1>Expectations and stability: Cagan model, original</h1>
 <ul class="incremental">
-<li><p>\(m_t^d - p_t = -\alpha \pi_t^e\) and \(m_t\) - p_t = -alpha _t^e$, by market equilibrium</p></li>
-<li><p>Monetary molicy: \(m_t = \mu\)</p></li>
+<li><p>\(m_t^d - p_t = -\alpha \pi_t^e\) and \(m_t - p_t = -\alpha \pi_t^e\), by market equilibrium</p></li>
+<li><p>Monetary policy: \(m_t = \mu\)</p></li>
 <li><p>Differentiating, gives \[
 \alpha \dot{\pi}_t^e = \pi_t - \mu 
 \]</p></li>
-<li><p>Adaptative expec in Cagan’s model: $_t^e = $</p></li>
+<li><p>Adaptative expec in Cagan’s model: \(\dot{\pi}_t^e = \vartheta (\pi_t - \pi_t^e)\)</p></li>
+</ul>
+</section>
+<section class="slide level1" id="original-cm-contd">
+<h1>Original CM, contd</h1>
+<ul class="incremental">
+<li><p>\(\pi_t = \dfrac{\mu - \alpha \vartheta \pi^e_t}{1-\alpha \vartheta}\)</p></li>
+<li><p>\(\dot{\pi}_t^e = \dfrac{\vartheta}{1-\alpha \vartheta} (\mu - \pi_t^e)\)</p></li>
+<li><p>\(\dot{\pi}_t = -\dfrac{\vartheta}{1-\alpha \vartheta} (\pi_t -\mu)\). Steady state is \(\mu\)</p></li>
+<li><p>Inflation will converge to \(\mu\) if \(\alpha \vartheta &lt; 1\). Otherwise diverge. Hyperinflation.</p></li>
+</ul>
+</section>
+<section class="slide level1" id="cagan-a-la-sargent-wallace">
+<h1>Cagan a la Sargent &amp; Wallace</h1>
+<ul class="incremental">
+<li><p>\(-\alpha \dfrac{d p_t}{t} = m_t - p_t\) can be rewritten as \[
+\frac{d \left( e^{- t/\alpha}  ~ p_t \right)}{d t} = - \frac{1}{\alpha} e^{-t/\alpha} m_t
+\]</p></li>
+<li><p>This integrates to \[
+e^{-t/\alpha} p_t - p_0 =  - \frac{1}{\alpha} \int_0^t e^{-s/\alpha} m_s ds
+\]</p></li>
+</ul>
+</section>
+<section class="slide level1" id="cagan-a-la-sargent-wallace-2">
+<h1>Cagan a la Sargent &amp; Wallace, 2</h1>
+<ul class="incremental">
+<li><p>\[
+ p_t  = e^{-t/\alpha} \left[ p_0 - \frac{1}{\alpha} \int_0^t e^{-s/\alpha} m_s ds\right]
+\]</p></li>
+<li><p>\[
+ p_0  =  \frac{1}{\alpha} \int_0^\infty e^{-s/\alpha} m_s ds
+\]</p></li>
+<li><p>\[
+ p_t  =  \frac{1}{\alpha} \int_t^\infty e^{-(s-t)/\alpha} m_s ds
+\]</p></li>
+</ul>
+</section>
+<section class="slide level1" id="cagan-a-la-sargent-wallace-3">
+<h1>Cagan a la Sargent &amp; Wallace, 3</h1>
+<ul class="incremental">
+<li>Experiment: at date \(t_0\) is announced that money will jump from \(M_0\) to \(\delta M_0\) with \(\delta&gt;1\). This new policy will start at date \(t_0 + \theta\). What is the evolution of aggregate price level?</li>
 </ul>
 </section>
 <!-- {{{{ dzslides core
