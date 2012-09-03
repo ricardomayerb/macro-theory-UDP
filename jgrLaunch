@@ -1,8 +1,0 @@
-#!/bin/csh
-
-setenv R_HOME /Library/Frameworks/R.framework/Resources
-setenv R_LIBS /Library/Frameworks/R.framework/Versions/2.15/Resources/library
-setenv R_LIBS_USER /Library/Frameworks/R.framework/Versions/2.15/Resources/library;/Applications/RStudio.app/Contents/Resources/R/library
-
-./JGR-SL.app/Contents/MacOS/JGR
-
