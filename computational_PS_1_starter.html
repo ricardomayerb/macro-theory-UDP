@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>make &ldquo;base&rdquo; plot, will add features below</title>
+
+<base target="_blank"/>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<p>library(ggplot2)<br/>
+library(tables)<br/>
+library(knitr)<br/>
+library(rdatamarket)<br/>
+booktabs()</p>
+
+<p>opts_chunk$set(fig.align=&ldquo;center&rdquo;,  message=FALSE, warning=FALSE)</p>
+
+<p>pwdata &lt;- read.csv(&ldquo;pwt71_w_country_names.csv&rdquo;)</p>
+
+<p>selectediso = c(&ldquo;ARG&rdquo;,&ldquo;CHL&rdquo;, &ldquo;BRA&rdquo;) ;<br/>
+myselection=subset(pwdata,isocode %in% selectediso)# <br/>
+myselection = droplevels(myselection) #use this in case that void levels for country or iso give you problems</p>
+
+<h1>make &ldquo;base&rdquo; plot, will add features below</h1>
+
+<p>plot1=qplot(year,rgdpch, data=myselection,geom= &ldquo;path&rdquo;, colour=country)<br/>
+#normally one would only show the final version of the plot, so this call to print wouldn&#39;t exist<br/>
+print(plot1) # prints means here to show in screen</p>
+
+<h1>add a smoothed mean to the base plot</h1>
+
+<p>plot2 = plot1 + geom_smooth(se=TRUE, linetype=2)</p>
+
+<h1>(&hellip; neither would this one)</h1>
+
+<p>print(plot2)</p>
+
+<h1>change labels of the axes and legend</h1>
+
+<p>plot3= plot2 + labs(colour = &ldquo;Countries&rdquo;, x=&#39;&#39;, y=&ldquo;GDP per capita (PPP), $ of 2005&rdquo;)</p>
+
+<p>print(plot3) # this is the one you should &#39;print&#39; </p>
+
+<h1>now a table</h1>
+
+<h1>na.omit is needed since otherwise mean and sd return NA</h1>
+
+<p>mytable = tabular( (country + 1) ~ (n=1) + Format(digits=2)<em>(kc + ki)</em>(mean+sd), data= na.omit(myselection))</p>
+
+<p>oilinfo = dminfo(&ldquo;<a href="http://data.is/NoT2Sd%22">http://data.is/NoT2Sd&rdquo;</a>)<br/>
+oilzoo = dmseries(oilinfo)<br/>
+oildf = dmlist(oilinfo)</p>
+
+<p>oilsmalldf =  dmlist(oilinfo, &ldquo;Country&rdquo; = c(&ldquo;Algeria&rdquo;,&ldquo;Brazil&rdquo;,&ldquo;Venezuela&rdquo;))<br/>
+oilsmallzoo =  dmseries(oilinfo, &ldquo;Country&rdquo; = c(&ldquo;Algeria&rdquo;,&ldquo;Brazil&rdquo;,&ldquo;Venezuela&rdquo;))</p>
+
+<p>plotoil1=qplot(Year,Value, data=oilsmalldf,geom= &ldquo;path&rdquo;, colour=Country)<br/>
+print(plotoil1)</p>
+
+<p>plot(oilsmallzoo, plot.type=&ldquo;single&rdquo;, lty=1:3, col=1:3)<br/>
+legend(x=&ldquo;bottomright&rdquo;,legend=colnames(oilsmallzoo), lty=1:3, col=1:3)</p>
+
+<p>plot(oilsmallzoo, plot.type=&ldquo;multiple&rdquo;)</p>
+
+</body>
+
+</html>
+
