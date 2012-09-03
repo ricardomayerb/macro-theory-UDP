@@ -1,0 +1,137 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{hyperref}
+
+\begin{document}
+\title{Macro Theory: Assignment 3}
+\author{Ricardo Mayer}
+\date{\today}
+\maketitle
+
+
+\section{Revenge of the Sith, I}
+\textbf{Submit a correct answer to Question 4 of Assignment 1 (a.k.a Problem Set 1).}
+
+For you convenience I'll repeat the question here:
+
+\begin{enumerate}
+\item Write down Bayes rule for $f_{X|Y}(x|y)$. Note that this notation refers to \emph{densities}! Please employ the same notation in your answer
+
+\item Write down Bayes rule for $f_{X|Y,Z}(x|y,z)$, maintaining the conditioning on $Z=z$.
+
+\item Show how  you can obtain $f(x,y)$ using only $f(x,y,z$) or using together $f_{Y,X|Z}(x,y|z)$ and $f_{Z}(z)$.
+
+\item Suppose that $x$ and $y$ have a joint distribution that is uniform. The support of the joint distribution is given by $\{(x,y): x \in (0,y), y \in (0,1)\}$.
+   \begin{enumerate}
+     \item Draw a diagram showing the support of $f(x,y)$.
+   
+     \item You already know the joint is uniform (thus, a constant). Find out what is proper constant height of the joint.
+   
+     \item Find the marginal density  $f_X(x)$.
+   
+     \item Find the conditional density $f_{Y|X}(y|x)$   
+   \end{enumerate}
+
+\end{enumerate}
+
+\section{Revenge of the Sith, II}
+\textbf{Submit a correct answer to the entire Assignment 2 (a.k.a Computational Problem Set 1).}
+
+Even if you are the \emph{one} case that submitted a correct answer, this time please emulate the instruction's .Rmd file and hide unimportant messages or results when loading packages or calling functions \ldots that applies to everyone, BTW.
+
+\section{Past shocks, adaptive expectations and Muth 1961}
+Consider equation (6) in Chapter 3 of Benassy's book. Starting from there,
+
+\begin{enumerate}
+\item Write $p_t$ as a function of $p_{t-2}, \epsilon_{t}, \epsilon_{t-1}$.
+\item Write $p_t$ as a function of $p_{t-3}, \epsilon_{t}, \epsilon_{t-1}, \epsilon_{t-2}$.
+\item Write $p_t$ as a function of $p_{t-4}, \epsilon_{t}, \epsilon_{t-1}, \epsilon_{t-4}, \epsilon_{t-3}$. In this case, use summation signs to simplify your formula
+\item Starting from the previous point, write $p_t$ as a function of past shocks into an infinite past. Take limits where you must, in order to get the same expression you'll find in equation (7) of the same chapter. 
+\end{enumerate}
+
+\section{Sargent and Wallace's increase in quantity of money}
+Consider the Sargent and Wallace's version of the Cagan model as depicted in section (3.5.2) of Benassy's book. Read the mental experiment there concerning a rise of money quantity. Prove that the equations describing the evolution of $p_t$ are correct. Looking at Figure 2 may aid your intuition. Assume, throughout your answer, that at time $t_0+\theta$ money becomes 25\% higher than before.   
+
+
+\section{Economic model and pseudocode}
+
+\begin{enumerate}
+\item Get familiar with the concept and examples of Pseudocode and algorithm. They are close cousins of Flow Charts, but they are not the same. You may start drawing a flow chart if that helps you start  thinking on your problem. A complete pseudocode may contain the data gathering steps of your work, the actual computations you want to carry and what output to display and when. Algorithms are usually understood to refer to specific parts of your work. Here are some links so you may illustrate yourself:
+     \begin{itemize}
+     \item \href{https://es.wikipedia.org/wiki/Pseudoc%C3%B3digo}{ Wikipedia reference for Pseudocode}. Note the difference between the pseudocode that has a particular programming language in mind and the more numerical-math oriented, that tends to use more traditional math notation and borrows a few control flow structures from computer science.
+     \item Here are two examples of numerical algorithms, commonly used in numerical mathematics : the \href{https://en.wikipedia.org/wiki/Jacobi_method}{Jacobi method} and the \href{https://en.wikipedia.org/wiki/Conjugate_gradient_method}{Conjugate-Gradient method}.
+     \item I'd rather have you to write your pseudocode by hand and not in \LaTeX (at least for this assignment) but \href{https://en.wikibooks.org/wiki/LaTeX/Algorithms_and_Pseudocode}{this page}  have additional example of how pieces of pseudocode look like. 
+     \end{itemize}
+\item This is the actual question: \textbf{(hand)write a pseudocode that, in principle, would allow you to obtain time series of simulated data for consumption, investment, capital and labor, \emph{generated} by the model presented in section \ref{sec:two-prod-model}.}. This will force you to visualize the general aspects of the problem and to distinguish specific ways to accomplish some of the steps. There is always a trade-off between generality and usefulness of the pseudocode as a guide for action.      
+\end{enumerate}
+
+\section{Practising log-linearization}
+Take a look at Harald Uhlig's toolkit. The model featured in section \ref{sec:two-prod-model} is very similar to the one in that paper. This question will be easy if you first do and understand Uhlig example first.
+
+\begin{enumerate}
+\item Find the system of equations that determine the steady states values of the relevant variables, for the Social Planner's problem (SPP) in the economy of section \ref{sec:two-prod-model}.
+\item Log-linearize the resource constraint for the SPP in the economy of section \ref{sec:two-prod-model}. 
+\end{enumerate}
+
+\section{Log-linearization as a special case of change of variables}
+
+Suppose that you have these equations:
+
+\begin{align}
+c_t(K_{t-1}, z_t) & = \bar{c} + \alpha_{ck} k_{t-1} + \alpha_{cz} z_t \\
+l_t(k_{t-1}, z_t) & = \bar{l} + \alpha_{lk} k_{t-1} + \alpha_{lz} z_t
+\end{align}
+
+and
+
+\begin{align}
+C_t(K_{t-1}, z_t) & = \bar{C} + \beta_{ck} K_{t-1} + \beta_{cz} z_t \\
+L_t(K_{t-1}, z_t) & = \bar{L} + \beta_{lk} K_{t-1} + \beta_{lz} z_t
+\end{align}
+
+where $x_t := \ln X_t$. Now suppose that you already have the $\beta$'s, that is, the coefficients used when consumption, labor and capital are measured in logs. Show that is you want to use the variables in levels (the capital letters) you don't have to redo all your hard work, because it's sufficient to transform the $\beta$'s to find the appropriate $\alpha$'s. Tip: this is just an application of the Chain Rule and of the fact that coefficients are just partial derivatives.
+
+
+\section{A two-real-productivities  model}\label{sec:two-prod-model}
+
+At date zero, a social planner seeks to maximize the following criteria  by choosing a sequence of capital stock, labor fraction of available time and consumption level: 
+
+\[\max_{\{ K_t,C_t,Lt\}_{t=0}^{\infty}} E_0 \left[ \sum_{t=0}^{\infty} \beta^t \left( \ln C_t + \Psi \ln (1-L_t)\right) \right]    \]
+
+Output, in turn, has two uses: consumption and investment,
+\begin{equation}\label{resconslevels}
+C_t + I_t \leq Y_{t}
+\end{equation}
+Capital stock grows by investing, $I_t$, and decreases due to depreciation of existing capital, $\delta K_{t-1}$.
+\begin{equation}\label{kevollevels}
+K_{t} = V_{t} I_t + (1-\delta) K_{t-1}
+\end{equation}
+
+Combining the resource constraint \ref{resconslevels} and the capital accumulation \ref{kevollevels} results in the following constraint,
+\[ A_t  K^{\alpha}_{t-1} L^{1-\alpha}_{t}  + (1-\delta) \frac{K_{t-1}}{V_t}  -C_t - \frac{K_{t}}{V_t} \]
+
+There is also a transversality condition to be met:
+
+\[ \lim_{T \rightarrow \infty } E_0 \beta^{T} \frac{1}{C_T} \frac{1}{V_T} K_T = 0\]
+
+
+Then, a  Lagrangian function for the SPP is given by 
+
+
+\begin{equation}\label{eq:LagrangianSP}
+\max_{\{ K_t,C_t,Lt\}_{t=0}^{\infty}}   E_0  \left[ \sum_{t=0}^{\infty} \beta^t \left( \ln C_t + \Psi \ln (1-L_t) +\lambda_t \left[ A_t  K^{\alpha}_{t-1} L^{1-\alpha}_{t}  + (1-\delta) \frac{K_{t-1}}{V_t}  -C_t - \frac{K_{t}}{V_t}  \right]\right)  \right]  
+\end{equation}
+
+Finally, we temporally assume that $A$ and $V$ are stationary:
+
+\begin{equation}\label{eq:evo_A}
+\ln A_t = (1-\rho_a)\bar{A} + \rho_a \ln A_{t-1} + \epsilon_{a,t}, \quad \epsilon_a \sim \text{ i.i.d. } N(0,\sigma_a^2)  
+\end{equation} 
+
+\begin{equation}\label{eq:evo_V}
+\ln V_t = (1-\rho_v)\bar{V} + \rho_v \ln V_{t-1} + \epsilon_{v,t}, \quad \epsilon_v \sim \text{ i.i.d. } N(0,\sigma_v^2)  
+\end{equation} 
+
+
+\end{document}
