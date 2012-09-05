@@ -16,13 +16,13 @@
 For you convenience I'll repeat the question here:
 
 \begin{enumerate}
-\item Write down Bayes rule for $f_{X|Y}(x|y)$. Note that this notation refers to \emph{densities}! Please employ the same notation in your answer
+\item Write down Bayes rule for $f_{X|Y}(x|y)$. Note that this notation refers to \emph{densities}! Please employ the same notation in your answer.
 
 \item Write down Bayes rule for $f_{X|Y,Z}(x|y,z)$, maintaining the conditioning on $Z=z$.
 
 \item Show how  you can obtain $f(x,y)$ using only $f(x,y,z$) or using together $f_{Y,X|Z}(x,y|z)$ and $f_{Z}(z)$.
 
-\item Suppose that $x$ and $y$ have a joint distribution that is uniform. The support of the joint distribution is given by $\{(x,y): x \in (0,y), y \in (0,1)\}$.
+\item Suppose that $x$ and $y$ have a joint distribution that is \textbf{uniform}. The support of the joint distribution is given by $\{(x,y): x \in (0,y), y \in (0,1)\}$.
    \begin{enumerate}
      \item Draw a diagram showing the support of $f(x,y)$.
    
@@ -46,31 +46,31 @@ Consider equation (6) in Chapter 3 of Benassy's book. Starting from there,
 \begin{enumerate}
 \item Write $p_t$ as a function of $p_{t-2}, \epsilon_{t}, \epsilon_{t-1}$.
 \item Write $p_t$ as a function of $p_{t-3}, \epsilon_{t}, \epsilon_{t-1}, \epsilon_{t-2}$.
-\item Write $p_t$ as a function of $p_{t-4}, \epsilon_{t}, \epsilon_{t-1}, \epsilon_{t-4}, \epsilon_{t-3}$. In this case, use summation signs to simplify your formula
+\item Write $p_t$ as a function of $p_{t-4}, \epsilon_{t}, \epsilon_{t-1}, \epsilon_{t-4}, \epsilon_{t-3}$. In this case, use summation symbols to simplify your formula
 \item Starting from the previous point, write $p_t$ as a function of past shocks into an infinite past. Take limits where you must, in order to get the same expression you'll find in equation (7) of the same chapter. 
 \end{enumerate}
 
 \section{Sargent and Wallace's increase in quantity of money}
-Consider the Sargent and Wallace's version of the Cagan model as depicted in section (3.5.2) of Benassy's book. Read the mental experiment there concerning a rise of money quantity. Prove that the equations describing the evolution of $p_t$ are correct. Looking at Figure 2 may aid your intuition. Assume, throughout your answer, that at time $t_0+\theta$ money becomes 25\% higher than before.   
+Consider the Sargent and Wallace's version of the Cagan model as depicted in section (3.5.2) of Benassy's book. Read the mental experiment there concerning an increment in the quantity of money. Prove that the equations describing the evolution of $p_t$ are correct. Looking at Figure 2 may aid your intuition. Assume, throughout your answer, that at time $t_0+\theta$ money becomes 25\% higher than before.   
 
 
 \section{Economic model and pseudocode}
 
 \begin{enumerate}
-\item Get familiar with the concept and examples of Pseudocode and algorithm. They are close cousins of Flow Charts, but they are not the same. You may start drawing a flow chart if that helps you start  thinking on your problem. A complete pseudocode may contain the data gathering steps of your work, the actual computations you want to carry and what output to display and when. Algorithms are usually understood to refer to specific parts of your work. Here are some links so you may illustrate yourself:
+\item Get familiar with the concept and examples of Pseudocode and algorithm. They are close cousins of Flow Charts, but they are not the same. You may start drawing a flow chart if that helps you start  thinking on your problem. A complete pseudocode may contain the data gathering steps of your work, the actual computations you want to carry and what output to display and when. Algorithms are usually understood to refer to specific parts of your work. Here are some links so you may enlighten yourself:
      \begin{itemize}
      \item \href{https://es.wikipedia.org/wiki/Pseudoc%C3%B3digo}{ Wikipedia reference for Pseudocode}. Note the difference between the pseudocode that has a particular programming language in mind and the more numerical-math oriented, that tends to use more traditional math notation and borrows a few control flow structures from computer science.
      \item Here are two examples of numerical algorithms, commonly used in numerical mathematics : the \href{https://en.wikipedia.org/wiki/Jacobi_method}{Jacobi method} and the \href{https://en.wikipedia.org/wiki/Conjugate_gradient_method}{Conjugate-Gradient method}.
-     \item I'd rather have you to write your pseudocode by hand and not in \LaTeX (at least for this assignment) but \href{https://en.wikibooks.org/wiki/LaTeX/Algorithms_and_Pseudocode}{this page}  have additional example of how pieces of pseudocode look like. 
+     \item I'd rather have you to write your pseudocode by hand and not in \LaTeX (at least for this assignment) but \href{https://en.wikibooks.org/wiki/LaTeX/Algorithms_and_Pseudocode}{this page}  have additional examples of how pieces of pseudocode look like. 
      \end{itemize}
 \item This is the actual question: \textbf{(hand)write a pseudocode that, in principle, would allow you to obtain time series of simulated data for consumption, investment, capital and labor, \emph{generated} by the model presented in section \ref{sec:two-prod-model}.}. This will force you to visualize the general aspects of the problem and to distinguish specific ways to accomplish some of the steps. There is always a trade-off between generality and usefulness of the pseudocode as a guide for action.      
 \end{enumerate}
 
 \section{Practising log-linearization}
-Take a look at Harald Uhlig's toolkit. The model featured in section \ref{sec:two-prod-model} is very similar to the one in that paper. This question will be easy if you first do and understand Uhlig example first.
+Take a look at Harald Uhlig's toolkit. For this assignment you may stop before the paper starts solving the system of equation by the method of undetermined coefficients. The model featured in section \ref{sec:two-prod-model} is very similar to the one in that paper. This question will be easy if you first do and understand Uhlig's example of steady state and log-linearizations first.
 
 \begin{enumerate}
-\item Find the system of equations that determine the steady states values of the relevant variables, for the Social Planner's problem (SPP) in the economy of section \ref{sec:two-prod-model}.
+\item Find the \emph{system of equations} that determine the steady states values of the relevant variables, for the Social Planner's problem (SPP) in the economy of section \ref{sec:two-prod-model}.
 \item Log-linearize the resource constraint for the SPP in the economy of section \ref{sec:two-prod-model}. 
 \end{enumerate}
 
@@ -79,7 +79,7 @@ Take a look at Harald Uhlig's toolkit. The model featured in section \ref{sec:tw
 Suppose that you have these equations:
 
 \begin{align}
-c_t(K_{t-1}, z_t) & = \bar{c} + \alpha_{ck} k_{t-1} + \alpha_{cz} z_t \\
+c_t(k_{t-1}, z_t) & = \bar{c} + \alpha_{ck} k_{t-1} + \alpha_{cz} z_t \\
 l_t(k_{t-1}, z_t) & = \bar{l} + \alpha_{lk} k_{t-1} + \alpha_{lz} z_t
 \end{align}
 
@@ -123,14 +123,14 @@ Then, a  Lagrangian function for the SPP is given by
 \max_{\{ K_t,C_t,Lt\}_{t=0}^{\infty}}   E_0  \left[ \sum_{t=0}^{\infty} \beta^t \left( \ln C_t + \Psi \ln (1-L_t) +\lambda_t \left[ A_t  K^{\alpha}_{t-1} L^{1-\alpha}_{t}  + (1-\delta) \frac{K_{t-1}}{V_t}  -C_t - \frac{K_{t}}{V_t}  \right]\right)  \right]  
 \end{equation}
 
-Finally, we temporally assume that $A$ and $V$ are stationary:
+Finally, we temporally assume that $A$ and $V$ are stationary :
 
 \begin{equation}\label{eq:evo_A}
-\ln A_t = (1-\rho_a)\bar{A} + \rho_a \ln A_{t-1} + \epsilon_{a,t}, \quad \epsilon_a \sim \text{ i.i.d. } N(0,\sigma_a^2)  
+\ln A_t = (1-\rho_a) \ln \bar{A} + \rho_a \ln A_{t-1} + \epsilon_{a,t}, \quad \epsilon_a \sim \text{ i.i.d. } N(0,\sigma_a^2)  
 \end{equation} 
 
 \begin{equation}\label{eq:evo_V}
-\ln V_t = (1-\rho_v)\bar{V} + \rho_v \ln V_{t-1} + \epsilon_{v,t}, \quad \epsilon_v \sim \text{ i.i.d. } N(0,\sigma_v^2)  
+\ln V_t = (1-\rho_v)\ln \bar{V} + \rho_v \ln V_{t-1} + \epsilon_{v,t}, \quad \epsilon_v \sim \text{ i.i.d. } N(0,\sigma_v^2)  
 \end{equation} 
 
 
