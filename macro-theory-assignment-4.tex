@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{hyperref}
+
+\begin{document}
+\title{Macro Theory: Assignment 4}
+\author{Ricardo Mayer}
+\date{\today}
+\maketitle
+
+
+\section{More on the Toolkit (50\%)}
+
+\begin{enumerate}
+\item Use  the parameter values chosen in section 4.5.3 of the Uhlig's document, to find the steady state values of consumption, capital and product ($Y$). You don't need to do this by hand.
+
+
+\item Write the equations presented at the beginning of section 4.5.2 of the toolkit paper, but using the values found at the start of section 4.5.3
+
+
+\item Assume that \textbf{consumption decided today, the return of capital ($R_t$) and capital decided today are \emph{functions of} the installed capital and the current shock} (so you can take derivatives of, say, capital decided today with respect to installed capital). And assume that such relations exist for all possible dates (i.e. for $0, \ldots t-1,t,t+1,t+2,\ldots$), with time-invariant partial derivatives. With this in mind, look at the page 9 of the toolkit. There is a system of four  equations, called (4.6). Each of the equations has its own number, right? For each equation, put everything in the right hand side of the equation, leaving only zero in the left hand side. OK, now do the following:
+  \begin{enumerate}
+  \item Take \emph{total} derivative of equation 1 w.r.t $K_{t-1}$. Notice that I don't mean just partial derivatives \footnote{Read about total derivatives \href{http://en.wikipedia.org/wiki/Total_derivative}{here}}
+  \item Take \emph{total} first derivatives of equation 2 w.r.t $K_{t-1}$.
+  \item Take \emph{total} first derivatives of equation 3 w.r.t $K_{t-1}$.
+  \item Take \emph{total} first derivatives of equation 1 w.r.t $Z_{t}$.
+  \item Take \emph{total} first derivatives of equation 2 w.r.t $Z_{t}$.
+  \item Take \emph{total} first derivative of equation 3 w.r.t $Z_{t}$. 
+  \item Do you have now a system of six equations containing six partial derivatives? Well, you should. Write this system again, but evaluate all variables at their steady state notation (e.g. write $\bar{K}^{\rho}$ instead of $K^{\rho}_{t-1}$).
+  \item Use the steady states values (number) you calculated at the beginning of this exercise on the system of equations that you just obtained. Now solve for the unknown six partial derivatives.
+  \item Think about your Assignment 3. What relation do you think exists between the partial derivatives you solved above and the coefficients $\vartheta_{kk},\vartheta_{ck},\ldots$?
+  \end{enumerate}
+\end{enumerate}
+
+\section{First computational Bayesian steps  (45\%)}
+Read the second chapter of Jim Albert's book (pages 19 to 35). While you are reading the book, or when your reading it again after a very quick first light-read, please copy, paste and execute every single line of code shown in the text. This will greatly help in your understanding of the material. Well, your task is simple: \emph{create an R script with all the code you have copied, pasted an executed while reading, BUT you must include also many comments (in spanish!)  in your code, explaining what's going on.} After you have your script, try to stitch it with knitr. Note: I'll ask you later to explain parts of your script to me, so you better understand it well!.
+
+\section{Bubbles  (5\%)}
+
+In Chapter 3 of Benassy's book, prove the following formula:
+
+\[ b_t = a E_t[b_{t+1}]  \]
+
+
+\end{document}
