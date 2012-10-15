@@ -36,9 +36,7 @@ gcgsel = droplevels(gcgsel)
     #Para GDP per capita (PPP) $ of 2005
       # make "base" plot, will add features below
       plot1=qplot(year,rgdpch, data=gcgsel,geom= "path", colour=country)
-      print(plot1)
       plot2 = plot1 + geom_smooth(se=TRUE, linetype=2)
-      print(plot2)
       plot3= plot2 + labs(colour = "Countries", x="Year", y="GDP per capita (PPP), $ of 2005")
       print(plot3)
 

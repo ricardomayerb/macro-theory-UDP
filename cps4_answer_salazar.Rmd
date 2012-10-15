@@ -1,0 +1,108 @@
+First computationa Bayesian steps (Answers)
+========================================================
+
+```{r echo=FALSE, message=FALSE, results="hide", cache=FALSE}
+library(ggplot2)
+library(LearnBayes)
+library(tables)
+library(gdata)
+library(knitr)
+library(rdatamarket)
+booktabs()
+
+opts_chunk$set(fig.align="center",  message=FALSE, warning=FALSE)
+```
+
+Read the second chapter of Jim Albert's book (pages 19 to 35). While you are reading the book, or when you reading it again after a very quick first light-read, please copy, paste and execute every single line of code shown in the text. This will greatly help in you understanding of the material. Well, your task is simple: *create an R script with all the code you hace copied, pasted an executed while reading, BUT you must include also many comments (in spanish!) in your code, explaining what's going on*. After you hace your script, try to stitch it with knitr. Note: I'll ask you later to explain parts of your script to me, so you better understand it well!.
+
+
+```{r}
+#Página 21
+p = seq(0.05, 0.95, by = 0.1) #Genera una sucesión de valores de 0.05 a 0.95 con saltos de 0.1.
+prior = c(1, 5.2, 8, 7.2, 4.6, 2.1, 0.7, 0.1, 0, 0) #Genera un vector de pesos relativos para cada probabilidad.
+prior = prior/sum(prior) #Se obtiene la probabilidad a priori
+plot(p, prior, type = "h", ylab="Prior Probability")
+
+#Página 22
+data = c(11, 16) #Genera un vector son número de éxitos 11 y fracasos 16.
+post = pdisc(p, prior, data) #Computa la probabilidad a posteriori.
+round(cbind(p, prior, post),2) #Combina los elementos de las columnas p, prior y post; redondea las probabilidades a dos decimales.
+library(lattice)
+PRIOR=data.frame("prior",p,prior) #Genera una tabla separando las probabilidades a priori.
+POST=data.frame("posterior",p,post) #Genera una tabla separando las probabilidades a posteriori.
+names(PRIOR)=c("Type","P","Probability") #Le asigna nombre a cada una de las columnas.
+names(POST)=c("Type","P","Probability")
+data=rbind(PRIOR,POST) #Combina elementos de las filas a priori y a posteriori.
+xyplot(Probability~P|Type,data=data,layout=c(1,2), type="h",lwd=3,col="black")
+
+#Página 24
+quantile2=list(p=.9,x=.5) #La persona considera que el percentil 90 se da en un 0.5.
+quantile1=list(p=.5,x=.3) #La persona considera que el percentil mediano se da en un 0.3.
+beta.select(quantile1,quantile2) #Es una función que permite encontrar los parámetros de forma de la densidad de beta que conciden con el conocimiento previo. [a,b]
+
+a = 3.26 #Parámetro encontrado según conocimiento de la persona.
+b = 7.19 
+s = 11 # Número de éxitos
+f = 16 # Número de fallos
+curve(dbeta(x,a+s,b+f), from=0, to=1, xlab="p",ylab="Density",lty=1,lwd=4) #Probabilidad a posteriori.
+curve(dbeta(x,s+1,f+1),add=TRUE,lty=2,lwd=4)  #Likelihood.
+curve(dbeta(x,a,b),add=TRUE,lty=3,lwd=4)  # Probabilidad a priori.
+legend(.7,4,c("Prior","Likelihood","Posterior"), lty=c(3,2,1), lwd=c(3,3,3))
+
+1 - pbeta(0.5, a + s, b + f) #Probabilidad de que la proporción sea mayor o igual a 0.5 dada la información previa.
+
+#Página 25
+qbeta(c(0.05, 0.95), a + s, b + f) #Intervalo al 90% de confainaza para la proporción.
+
+ps = rbeta(1000, a + s, b + f) #Simula 1000 valores aleatorios para la proporción desde la función beta(a+s, b+f) posterior.
+hist(ps,xlab="p",main="")
+
+#Página 26
+sum(ps >= 0.5)/1000 #Calcula la probabilidad que la proporción sea mayor o igual a 0.5 (Porporción de valores simulados)
+quantile(ps, c(0.05, 0.95)) #Intervalo al 90% de confianza, puede ser estimado por los quintiles 5th y 95th de la muestra.
+
+#Página 27
+midpt = seq(0.05, 0.95, by = 0.1) #Extrae el valor intermedio del intervalo.
+prior = c(1, 5.2, 8, 7.2, 4.6, 2.1, 0.7, 0.1, 0, 0)  #Genera un vector de pesos relativos para cada probabilidad.
+prior = prior/sum(prior) #Se obtiene la probabilidad a priori
+curve(histprior(x,midpt,prior), from=0, to=1, ylab="Prior density", ylim=c(0,.3)) #Refleja la opinión previa que posee el individuo sobre la proporción p.
+
+curve(histprior(x,midpt,prior) * dbeta(x,s+1,f+1),from=0, to=1, ylab="Posterior density") #Une el histograma a priori con la función de verosimilitud, dando pie a la función de densidad a posteriori.
+
+#Página 28
+p = seq(0, 1, length=500) #Genera un intervalo de 0 a 1 de 500 valores equivalentemente distribuidos.
+post = histprior(p, midpt, prior) * dbeta(p, s+1, f+1) # COmputa el prodcuto de la probabilidad a priori y la likelhood en el vector.
+post = post/sum(post)
+
+ps = sample(p, replace = TRUE, prob = post) #Obtiene una muestra con reemplazo del vector.
+hist(ps, xlab="p", main="")
+
+#Página 30
+p=seq(0.05, 0.95, by=.1) #Genera una sucesión de valores de 0.05 a 0.95 con saltos de 0.1. Vector de proporciones.
+prior = c(1, 5.2, 8, 7.2, 4.6, 2.1, 0.7, 0.1, 0, 0)  #Genera un vector de pesos relativos para cada probabilidad. Vector de probabilidades actuales.
+prior=prior/sum(prior)
+m=20; ys=0:20 #Valor futuro de la muestra, y vector de número de sucesos éxitos de interes.
+pred=pdiscp(p, prior, m, ys) #Computa la distribución predecible de un número de sucesos exitosos de un experimento binominal futuro con una distribución discreta de proporción.
+round(cbind(0:20,pred),3) #Combina los elementos de las columnas ys y predicción; redondea las probabilidades a tres decimales.
+
+#Página 31
+ab=c(3.26, 7.19) #Input de la función de densidad beta, parámetros a y b, respectivamente.
+m=20; ys=0:20 #Valor futuro de la muestra, y vector de número de sucesos éxitos de interes.
+pred=pbetap(ab, m, ys) #Computa la distribución (beta) predecible de un número de sucesos exitosos de un experimento binominal futuro con una distribución discreta de proporción.
+
+#Página 32
+p=rbeta(1000, 3.26, 7.19)  #Simula 1000 valores aleatorios para la proporción desde la función beta(a, b) a priori.
+y = rbinom(1000, 20, p) #Simula los valores para el número de sucesos éxitosos a futuro.
+table(y) #Tabula los datos.
+
+freq=table(y) #Guarga las frecuencias en un vector.
+ys=as.integer(names(freq)) #Le da nombre a la frecuencias (primera fila).
+predprob=freq/sum(freq) #Convierte las frecuencias en probabilidades al dividir cada una por la suma.
+plot(ys,predprob,type="h",xlab="y", ylab="Predictive Probability") #Grafica la distribución de predicción.
+
+dist=cbind(ys,predprob) #Combina las columnas ys y predprob.
+dist
+covprob=.9 # 90% de probabilidad de cubrir el intervalo.
+discint(dist,covprob) #Computa el intervalo de probablidad superior para una distribución de probabilidad discreta. Otorga el conjunto creíble y la probabilidad de cobertura exacta.
+
+```

@@ -27,24 +27,12 @@ gcgsel = droplevels(gcgsel)
 # Pregunta 1 Gráficos Para GDP per capita (PPP) $ of 2005 make 'base'
 # plot, will add features below
 plot1 = qplot(year, rgdpch, data = gcgsel, geom = "path", colour = country)
-print(plot1)
-```
-
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-21.png) 
-
-```r
 plot2 = plot1 + geom_smooth(se = TRUE, linetype = 2)
-print(plot2)
-```
-
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-22.png) 
-
-```r
 plot3 = plot2 + labs(colour = "Countries", x = "Year", y = "GDP per capita (PPP), $ of 2005")
 print(plot3)
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-23.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-21.png) 
 
 ```r
 
@@ -55,7 +43,7 @@ plot4 = qplot(year, kc, data = gcgsel, geom = "path", colour = country) + geom_s
 print(plot4)
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-24.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-22.png) 
 
 ```r
 
@@ -66,7 +54,7 @@ plot5 = qplot(year, kg, data = gcgsel, geom = "path", colour = country) + geom_s
 print(plot5)
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-25.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-23.png) 
 
 
 + Install and/or load the `tables` package. Produce a table similar to 

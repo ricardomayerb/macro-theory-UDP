@@ -1,0 +1,143 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+\geometry{letterpaper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+\usepackage{fullpage}
+\renewcommand{\baselinestretch}{1.5}
+% See the ``Article customise'' template for come common customisations
+
+\title{TEOR\'IA MACROECON\'OMICA \\ TAREA 4}
+\author{Gonzalo Salazar C.}
+\date{\today} % delete this line to display the current date
+
+\usepackage{Sweave}
+\begin{document}
+\input{cps4_answer_salazar-concordance}
+
+\maketitle
+
+\bigskip
+{\LARGE \textbf{More on the Toolkit}}
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+\medskip
+\begin{enumerate}
+\item{Use the parameter values chosen in section 4.5.4 of the Uhlig's document, to fin the steady state values of consumption, capital and product (Y). You don't need to do this by hand.}
+
+\medskip
+\emph{Respuesta:}
+
+Teniendo en cuenta los siguientes valores: $\beta=0.99$, $\rho=0.36$, $\eta=1.0$, $\delta=0.025$ y $\bar Z=1$; tenemos que:
+
+\medskip
+Para la \emph{restricci\'on}:
+\begin{eqnarray*}
+\bar R & = & \frac{1}{\beta} \\
+\bar R & = & \frac{1}{0.99} \\
+\bar R & = & 1.01
+\end{eqnarray*}
+
+\medskip
+Para el \emph{capital}:
+\begin{eqnarray*}
+\bar K & = & (\frac{\rho\bar Z}{\bar R-1+\delta})^{\frac{1}{(1-\rho)}} \\
+\bar K & = & (\frac{0.36}{\bar R-0.975})^{1.5625} \\
+\bar K & = & (\frac{0.36}{1.01-0.975})^{1.5625} \\
+\bar K & = & 38.16 \\
+\end{eqnarray*}
+
+\medskip
+Para el \emph{ingreso}:
+\begin{eqnarray*}
+\bar Y & = & \bar Z \bar K^{\rho} \\
+\bar Y & = & \bar K^{0.36} \\
+\bar Y & = & (38.16)^{0.36} \\
+\bar Y & = & 3.71
+\end{eqnarray*}
+
+\medskip
+Para el \emph{consumo}:
+\begin{eqnarray*}
+\bar C & = & \bar Z \bar K^{\rho}+(1-\delta)\bar K-\bar K \\
+\bar C & = & \bar K^{0.36}+(1-0.025)\bar K - \bar K \\
+\bar C & = & (38.16)^{0.36}-0.025\bar K \\
+\bar C & = & 2.756
+\end{eqnarray*}
+
+\item{Write the equations presented at the beginning of section 4.5.2 of the toolkit paper, but using the values found at the start of section 4.5.3}
+
+\medskip
+\emph{Respuesta:}
+
+\medskip
+Tenemos que:
+\begin{eqnarray*}
+k_{t} & = & \nu_{kk}k_{t-1}+\nu_{kz}z_{t} \\
+r_{t} & = & \nu_{rk}k_{t-1}+\nu_{rz}z_{t} \\
+c_{t} & = & \nu_{ck}k_{t-1}+\nu_{cz}z_{t}
+\end{eqnarray*}
+
+Entonces:
+\begin{eqnarray*}
+k_{t} & = & 0.965k_{t-1}+0.075z_{t} \\
+r_{t} & = & -0.022k_{t-1}+0.035z_{t} \\
+c_{t} & = & 0.618k_{t-1}+0.305z_{t}
+\end{eqnarray*}
+
+\item{Assume that \textbf{consumption decided today, the return of capital ($R_{t}$) and capital decided today are \emph{functions of} the installed capital and the current shock} (so you can take derivates of, say, capital decided today with respect to installed capital). And assume that such relation exist for all possible dates (i.e. for $0$, $\ldots$, $t-1$, $t$, $t+1$, $t+2$, $\ldots$), with time-invariant partial derivates. With this in mind, look at the page 9 of the toolkit. There is a system of four equation, put everthing in the right hand side of the equation, leaving only zero in the left hand side. OK, now do the following:}
+  \begin{enumerate}
+  \item{Take \emph{total} derivative of equation $1$ w.r.t. $K_{t-1}$. Notice that I don't mean just partial derivatives\footnote{Read about total derivatives here.}.}
+  \item{Take \emph{total} derivative of equation $2$ w.r.t. $K_{t-1}$.}
+  \item{Take \emph{total} derivative of equation $3$ w.r.t. $K_{t-1}$.}
+  \item{Take \emph{total} derivative of equation $1$ w.r.t. $Z_{t}$.}
+  \item{Take \emph{total} derivative of equation $2$ w.r.t. $Z_{t}$.}
+  \item{Take \emph{total} derivative of equation $3$ w.r.t. $Z_{t}$.}
+  \item{Do you hace now a system of six equations containing six partial derivatives? Well, you should. Write this system again, but evaluate all variables at their steady state notation (e.g. write $\bar K^{\rho}$ instead of $K_{t-1}^{\rho}$)}
+  \item{Use the steady states values (number} you calculated at the beginnning of this exercise on the system of equations that you just obtained. Now solve for the unknown si partial derivatives.
+  \item{Think about your Assignment 3. What relation do you think exists between the partial derivatives you solved above and the coefficients $\vartheta{kk}$, $\vartheta_{ck}$, $\ldots$?}
+  \end{enumerate}
+\end{enumerate}
+
+\bigskip
+{\LARGE \textbf{First computational Bayesian steps}}
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+\medskip
+Read the second chapter of Jim Albert's book (pages 19 to 35). While you are reading the book, or when you reading it again after a very quick first light-read, please copy, paste and execute every single line of code shown in the text. This will greatly help in you understanding of the material. Well, your task is simple: \emph{create an R script with all the code you hace copied, pasted an executed while reading, BUT you must include also many comments (in spanish!) in your code, explaining what's going on}. After you hace your script, try to stitch it with knitr. Note: I'll ask you later to explain parts of your script to me, so you better understand it well!.
+
+\bigskip
+{\LARGE \textbf{Bubbles}}
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+\medskip
+In Chapter 3 of Benassy's book, prove the following formula:
+\begin{eqnarray*}
+b_{t} & = & aE_{t}[b_{t+1}]
+\end{eqnarray*}
+
+Tenemos las siguientes ecuaciones:
+\begin{eqnarray}
+p_{t} & = & aE_{t}p_{t+1}+(1-a)m_{t} \\
+p_{t}^{f} & = & (1-a)\sum_{j=0}^{\infty}a^{j}E_{t}m_{t+j} \\
+b_{t} & = & p_{t}-p_{t}^{f}
+\end{eqnarray}
+
+Reemplazando ($1$) y ($2$) en ($3$), tenemos que:
+\begin{eqnarray*}
+b_{t} & = & aE_{t}p_{t+1}+(1-a)m_{t}-(1-a)\sum_{j=0}^{\infty}a^{j}E_{t}m_{t+j} \\
+b_{t} & = & aE_{t}p_{t+1}-(1-a)\sum_{j=1}^{\infty}a^{j}E_{t}m_{t+j} \ \ \forall t
+\end{eqnarray*}
+
+Debemos probar que $b_{t}=aE_{t}b_{t+1}$, entonces:
+\begin{eqnarray*}
+b_{t+1} & = & aE_{t+1}p_{t+2}-(1-a)\sum_{j=1}^{\infty}a^{j}E_{t+1}m_{t+j+1} \ \ /\cdot a \\
+ab_{t+1} & = & a^{2}E_{t+1}p_{t+2}-(1-a)\sum_{j=1}^{\infty}a^{j+1}E_{t+1}m_{t+j+1} \ \ /\cdot E_{t}[\cdot] \\
+aE_{t}b_{t+1} & = & a^{2}E_{t}[E_{t+1}p_{t+2}]-(1-a)\sum_{j=1}^{\infty}a^{j+1}E_{t}[E_{t+1}m_{t+j+1}] \\
+aE_{t}b_{t+1} & = & a^{2}E_{t}p_{t+2}-(1-a)\sum_{j=1}^{\infty}a^{j+1}E_{t}m_{t+j+1} \\
+aE_{t}b_{t+1} & = & a^{2}E_{t}\{ \frac{p_{t+1}-(1-a)m_{t+1}}{a} \}-(1-a)\sum_{j=1}^{\infty}a^{j+1}E_{t}m_{t+j+1} \\
+aE_{t}b_{t+1} & = & aE_{t}p_{t+1}-a(1-a)E_{t}m_{t+1}-a(1-a)\sum_{j=1}^{\infty}a^{j}E_{t}m_{t+j+1} \\
+aE_{t}b_{t+1} & = & aE_{t}p_{t+1}-(1-a)\sum_{j=1}^{\infty}a^{j}E_{t}m_{t+j} \\
+aE_{t}b_{t+1} & = & b_{t} \ \Box
+\end{eqnarray*}
+
+\end{document}
