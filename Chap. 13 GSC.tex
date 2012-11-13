@@ -1,0 +1,133 @@
+\documentclass{beamer}
+\usefonttheme{professionalfonts}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{subfigure}
+\usepackage[dvips]{psfrag}
+
+
+
+\title{Macroeconomic Theory: Chapter 13, \textbf{Nominal Rigidities and Fluctuations}}
+\subtitle{Apuntes de Clase}
+\author{Gonzalo Salazar C. }
+\date{lunes 12 de noviembre de 2012}
+\begin{document}
+\frame{\titlepage}
+
+
+\begin{frame}{Introducci\'on}
+\begin{itemize}
+\item{El presente cap\'titulo busca extender el marco de estudio de los modelos DSGE considerando econom\'ias No-Walrasianas con rigideces nominales.}
+\item{Motivaciones varias para estudiar estos modelos:}
+	\begin{enumerate}
+	\item{El n\'muero de correlaciones dista bastante de las comparaciones que se realizan con el mundo real.}
+	\item{Estudios emp\'iricos han mostrado que los \emph{shocks} poseen efectos de larga duraci\'on en empleo y producto.}
+	\item{Las contribuciones en rigideces salariales y consideraciones de precio son usualmente usadas para calibrar los modelos.}		
+	\end{enumerate}	
+\item{Los modelos a estudiar ser\'an:}
+	\begin{itemize}
+	\item[I]{Generaci\'on temprana de rigidez salarial: \emph{Gray} [1976], \emph{Fischer} [1977a], \emph{Taylor} [1979, 1980].}
+	\item[II]{Modelos recientes: \emph{Rotemberg} [1982a, 1982b], \emph{Calvo} [1983], \emph{Calvo-Fischer} [1983-1977a].}
+	\end{itemize}	
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{El modelo}
+La versi\'on Walrasiana del modelo se basa en cuatro ecuaciones:
+\begin{eqnarray}
+y_{t} & = & \alpha_{t}+(1-\alpha)l_{t} \\
+w_{t}+l_{t} & = & p_{t} + y_{t} \\
+m_{t} & = & p_{t}+y_{t} \\
+l_{t} & = & l
+\end{eqnarray}
+
+donde las ecuaciones (1) y (2) corresponden al logaritmo de la funci\'on de producci\'on, donde $\alpha_{t}$ es el logaritmo del \emph{shock} tecnol\'ogico. La ecuaci\'on (3) es la cantidad de dinero, y la (4) se\~nala que la oferta de trabajo es constante. De esto obtenemos que el salario Walrasiano es: $w^{*}_{t}=m_{t}$.
+
+\begin{enumerate}
+\item[1.]{\textbf{Modelo de \emph{Gray}}: El salario se establece como el valor esperado del salario Walrasiano: $w_{t}=E_{t-1}w^{*}_{t}=E_{t-1}m_{t}$, adem\'as de asumir un \emph{random walk} de la forma: $m_{t}-m_{t-1}=\epsilon_{t}$; se llega a: $l_{t}=l+\epsilon_{t}$.}
+
+Esto muestra dos cosas: \emph{(i)} debido a la rigidez nominal en el salario, el \emph{shock} monetario tiene un impacto en el empleo y el producto y \emph{(ii)} el efecto del \emph{shock} es breve.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{...continuaci\'on}
+\begin{enumerate}
+\item[2.]{\textbf{Modelo de \emph{Fischer}}: Trata de crear persistencia agregando contratos laborales de mayor duraci\'on. Los contratos se basan en la informaci\'on del periodo $t-1$ quedando el salario de referencia como (luego de considerar dos cohortes, periodos pares e impares): $x_{t,t}=E_{t-1}w^{*}_{t}=E_{t-1}m_{t},\ t=[0,1]$. Quedando,}
+\begin{eqnarray*}
+l_{t} & = & \epsilon_{t}+\frac{\epsilon_{t-1}}{2},
+\end{eqnarray*}
+de lo que observamos que el \emph{shock} s\'olo persiste por dos per\'iodos, lo que corresponde a la duraci\'on del contrato.
+\item[3.]{\textbf{Modelo de \emph{Taylor}}: Difiere del modelo de \emph{\textbf{Fischer}} en que \emph{(i)} el contrato de salario nominal es el mismo para los periodos $t$ y $t+1$, teniendo que: $x_{t,t}=x_{t,t+1}=x_{t}$. \emph{(ii)} El salario de determinaci\'on de $x_{t}$ no es el Walrasiano ($w_{t}^{*}$), sino que: $w_{t}+\psi l_{t},\ \psi>0$. Finalmente arribamos a la expresi\'on: $l_{t}=\frac{1+\lambda}{2}\sum_{j=0}^{\infty}\lambda^{j}\epsilon_{t-j}$. Aqu\'i se observa que el efecto del \emph{shock} monetario sobre $l_{t}$ es m\'as persistente, independiente de la duraci\'on del contrato.}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Modelos recientes}
+Antes de partir, hace falta dar a conocer algunos aspectos importantes, los cuales son tomados en cuenta por los modelos presentados a continuaci\'on:
+\begin{enumerate}
+\item{Los salarios reales son proc\'iclicos en demas\'ia, donde los precios e inflaci\'on son excesivamente contrac\'iclicos.}
+\item{Los \emph{shocks} tecnol\'ogicos inducen una correlaci\'on positiva entre los salarios reales y el producto, pero los \emph{shocks} monetarios conllevan una correlaci\'on negativa entre salario real y producto.}
+\item{Si s\'olo se estuviera en presencia de un \emph{shock} tecnol\'ogico, la correlaci\'on entre los salarios reales y el producto ser\'ia uno.}
+\item{Si los \emph{shocks} monetarios son predominantes, se obtienen precios proc\'iclicos. En el caso de \emph{shocks} tecnol\'ogicos predominantes, el precio se torna contrac\'iclico.}
+\item{Finalmente, la correlaci\'on entre inflaci\'on y producto es positiva gracias a la presencia de \emph{shocks} monetarios, pero esta relaci\'on se puede ver invertida si existen \emph{shocks} tecnol\'ogicos lo suficientemente fuertes.}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{...continuaci\'on}
+Estos modelos poseen tres ventajas: \emph{(i)} son lo bastante flexibles, que van de lo perfectamente flexible a lo totalmente flexible, \emph{(ii)} sus soluciones pueden ser trabajadas con facilidad y \emph{(iii)} permiten construir modelos donde los \emph{shocks} tengan fuertes mecanismos de propagaci\'on bajo par\'ametros realistas.
+
+\smallskip
+Se asume que existe un costo de cambiar los precios, por lo tanto el problema a minimizar es: $E\sum_{t}\beta^{t}(p_{t}-p_{t}^{*})^{2}=E\sum_{t}\beta^{t}(p_{t}-m_{t})^{2}$
+
+\begin{enumerate}
+\item[1.]{\textbf{Modelo de \emph{Rotemberg}}: Asume adem\'as que el "fijador de precios" soporta un costo cuadr\'atico de cambiar los precios, obteniendo la siguiente soluci\'on:}
+\begin{eqnarray*}
+p_{t}-\lambda p_{t-1} & = & \frac{\lambda}{\delta}\sum_{j=0}^{\infty}\beta^{j}\lambda^{j}E_{t}m_{t+j},
+\end{eqnarray*}
+
+diferenciando con respecto a $\delta$, la ra\'iz autoregresiva, se puede intuir que el coeficiente de rigidez de precios $\lambda$ es una funci\'on creciente de los costos de cambio de precios ($\delta$).
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{...continuaci\'on}
+
+\begin{enumerate}
+\item[2.]{\textbf{Modelo de \emph{Calvo}}: Se asigna una probabilidad constante $1-\gamma$ a que el contrato finalice o una probabiidad $\gamma$ a que contin\'ue, obteniendo:}
+\begin{eqnarray*}
+p_{t}-\lambda p_{t-1} & = & (1-\gamma)(1-\beta\gamma)\sum_{j=0}^{\infty}\beta^{j}\gamma^{j}E_{t}m_{t+j},
+\end{eqnarray*}
+
+donde la ra\'iz de la ecuaci\'on autoregresiva es equivalente a la probabilidad $\gamma$ que el precio del contrato sea el mismo desde un periodo a otro.
+\item[CP\footnote{Curva de Phillips.}.]{Lo anterior se puede modelar como una Curva de Phillips \emph{foward-looking} $\pi_{t}=\beta E_{t}\pi_{t+1}+\kappa y_{t}$. Donde $\kappa=\frac{(1-\gamma)(1-\beta\gamma)}{\gamma}$ para el modelo de \textbf{Calvo} y $\frac{1}{\delta}$ para el de \textbf{Rotemberg}. Lo que caracteriza a esta CP es la relaci\'on positiva entre la inflaci\'on y la cantidad demandada adem\'as del componente proyectado.}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{...continuaci\'on}
+\begin{enumerate}
+\item[3.]{\textbf{Modelo de \emph{Calvo-Fischer}}: A diferencia de los modelos anteriores, el presente no obliga todos los contratos tomados en un periodo dado de tiempo a ser iguales en el resto de periodos futuros. Aqu\'i en el periodo $s$ uno decide los contratos para todas las fechas $t\geq s$, siendo estos contratos diferentes para todo $t$.}
+\end{enumerate}
+
+Para finalizar, un punto a considerar:
+
+\medskip
+Las rigideces reales ayudan a perfeccionar las rigideces en precios generadas por las rigideces nominales. i.e. consideremos consideremos un caso particular de rigidez real por parte de un hogar. La CPO que todo hogar tradicionalmente obtiene es: 
+\begin{eqnarray*}
+\frac{W_{t}}{P_{t}C_{t}} & = & L_{t}^{\nu},
+\end{eqnarray*}
+
+Si $\nu$ es peque\~no, los cambios en salarios reales ser\'an peque\~nos para variaciones dadas de $L_{t}$. 
+\end{frame}
+
+
+\end{document} 
