@@ -1,0 +1,113 @@
+\documentclass{beamer}
+\usefonttheme{professionalfonts}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{subfigure}
+\usepackage[dvips]{psfrag}
+
+
+
+\title{Macroeconomic Theory: Chapter 14, \textbf{Consumption, Investment, Inventories, and Credit.}}
+\subtitle{Apuntes de Clase}
+\author{Gonzalo Salazar C. }
+\date{lunes 12 de noviembre de 2012}
+\begin{document}
+\frame{\titlepage}
+
+
+\begin{frame}{Consumo}
+En 1957, M. Friedman usando la teor\'ia de ingreso permanente plantea que los individuos intentan suavizar su consumo a lo largo del tiempo. La idea principal es que el ingreso de los individuos es m\'as vol\'atil que el ingreso agregado, lo que le permite al individuo \textbf{suavizar} el \textbf{consumo}. Teniendo la CPO de un individuo caracter\'istico, $\beta^{t}U^{'}(c_{it})=\lambda_{i}\Delta_{t}$, se llega a la expresi\'on:
+\begin{eqnarray}
+c_{it} = c_{i} = \frac{1}{T}\sum_{t=0}^{T}y_{it}\, \forall t
+\end{eqnarray}
+
+La ecuaci\'on (1) muestra el consumo individual el cual est\'a completamente suavizado. Si $Y_{t}$ no es constante en el tiempo, la suavizaci\'on de este ser\'a menor a la perfecta dado que cada individuo tendr\'a que hacer frente a la volatilidad agregada, pero a\'un as\'i el consumo individual ser\'a menos vol\'atil que el ingreso de cada uno.
+\end{frame}
+
+\begin{frame}{...continuaci\'on}
+Asumiendo ingresos estoc\'asticos, se puede obtener una soluci\'on expl\'icita, cualquiera sea el grado de incertidumbre que se enfrente. Haciendo uso de una funci\'on de utilidad cuadr\'atica se est\'a en presencia de un fen\'omeno denominad \textbf{equivalencia cierta}, donde el consumo queda como: $C_{t}=E_{t}C_{t+1}\footnote{Proceso \emph{random walk}.}$. Reemplazando este \'ultimo en la restricci\'on presupuestaria del hogar queda:
+\begin{eqnarray}
+C_{t} = (1-\beta)\sum_{t=0}^{\infty}\beta^{j}E_{t}(Y_{t+j})
+\end{eqnarray}
+
+Lo anterior, (2), se\~nala que el consumo s\'olo depende de los ingresos esperados y no, totalmente, de la dispersi\'on posible en dichos ingresos. As\'i es como surge un concepto denominado \textbf{prudencia}, asociado al ahorro que se genera cuando $U'''>0$.
+\end{frame}
+
+
+\begin{frame}{Inversi\'on}
+Motivaciones para agregar costos de instalaci\'on:
+\begin{enumerate}
+\item{Cuando no existen costos de instalaci\'on se pueden producir discontinuidades potenciales en la demanda por inversi\'on.}
+\item{La inversi\'on es, a veces, bastante vol\'atil en modelos DSGE sin costos de instalaci\'on.}
+\end{enumerate}
+
+\textbf{El Modelo}
+\begin{eqnarray*}
+Y_{t}=AF(K_{t}),\ \ \ F'(K_{t})>0,\ \ \ F''(K_{t})<0
+\end{eqnarray*}
+
+\begin{enumerate}
+\item[(i)]{El modelo sin costos de instalaci\'on genera saltos que producen una discontinuidad, dado que la funci\'on de demanda por inversi\'on no est\'a acotada.}
+\item[(ii)]{En el modelo con costos de instalaci\'on, la empresa maximiza los beneficios descontados:}
+\begin{eqnarray*}
+\int_{0}^{\infty}e^{\rho t}[AF(K_{t})-J_{t}-\delta K_{t}-C(J_{t})]
+\end{eqnarray*}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{...continuaci\'on}
+De lo que se obtiene un estado estacionario caracterizado por el siguiente sistema din\'amico: $q^{*}=1,\ J^{*}=0,\ AF'(K^{*})=\delta+\rho$. Resultados que convergen ante cambios en las variables de inter\'es, i.e. impuestos ($\tau$).
+
+\medskip
+Por otra parte, se muestra que se puede derivar una funci\'on de inversi\'on a un \textbf{acelerador} e un entorno de competencia imperfecta con precios flexibles, obteniendo una soluci\'on para el capital (din\'amico):
+\begin{eqnarray}
+K_{t+1} & = & \lambda K_{t}+\frac{\beta\lambda A}{ad}\sum_{j=1}^{\infty}(\beta\lambda)^{j-1}E_{t}D_{t+j}
+\end{eqnarray}
+
+La ecuaci\'on (3) pertenece a la familia de aceleradores flexibles, donde: primero, representa una funci\'on para todos los \emph{shocks} de demanda esperados $E_{t}D_{t+j}$. $J\geq 1$, segundo, el capital posee una ra\'iz autoregresiva ($\lambda$) producto de los costos de instalaci\'on.
+\end{frame}
+
+
+\begin{frame}{Inventarios}
+La raz\'on directa de estudiar los inventarios es:
+\begin{enumerate}
+\item{Las firmas t\'ipicamente mantienen inventario para cuando las ventas no alcanzan cuando ocurren aumentos inesperados en la demanda.}
+\item{Cumplen la funci\'on de suavizar la producci\'on.}
+\item{Mercados con mayor poder de mercado conducen a mayores inventarios y menor racionamiento.}
+\end{enumerate}
+
+\medskip
+Comentarios varios:
+\begin{itemize}
+\item{\textbf{Precios ex\'ogenos}: Firmas pacientes y con capacidad de almacenamiento condena a una menor probabilidad de racionamiento. Esto conlleva al supuesto que la demanda no es racionada.}
+\item{\textbf{Precios end\'ogenos}: A mayor demanda inel\'astica mayores ser\'an los beneficios por unidad vendida y, por lo tanto, menor la probabilidad deseada de racionamiento porque la firma no quiere racionar dichos clientes que son rentables para ella.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cr\'edito}
+Antiguamente el cr\'edito era un \'area relevante de estudio tras la Gran Depresi\'on (1929),  actualmente es una campo que est\'a remontando por medio de teor\'ias de informaci\'on imperfecta que permiten explicar v\'ias por las cuales los mercados de cr\'edito pudieran funcionar de forma perfectamente eficiente y ampliamente con algunos \emph{shocks} que no pueden ser modelados con tal s\'olo considerar el mercado de monetario.
+
+\medskip
+Este se modela por medio de un mercado de acreedores y deudores, de dos formas: selecci\'on adversa y riesgo moral.
+
+\medskip
+\textbf{El Modelo}
+El retorno del deudor ser\'a una funci\'on convexa con la cual pueda escoger inversiones que puedan ser altamente riesgosas. La distribuci\'on de los proyectos de inversi\'on es simple: (a) proyecto 1 retorna $X_{1}$ con probabilidad $\pi_{1}$, y el $0$ con probabilidad $1-\pi_{1}$, y (b) proyecto 2 retorna $X_{2}$ con probabilidad $\pi_{2}$, y $0$ con probabilidad $1-\pi_{2}$. Adem\'as se asume que, $X_{1}<X_{2}$, $\pi_{1}>\pi_{2}$, donde el proyecto 2 es m\'as riesgoso, pero m\'as rentable que el proyecto 1. Ning\'un proyecto domina al otro.
+\end{frame}
+
+\begin{frame}{...continuaci\'on}
+\begin{enumerate}
+\item{\emph{Selecci\'on Adversa}: El problema est\'a en la dificultad que presenta el banco en distinguir entre los tipos de deudores a los que les puede prestar dinero, por lo cual se ver\'a obligado a aceptar postulantes en la misma proporci\'on que la poblaci\'on\footnote{$\alpha_{1}<1,\ \forall i, i=[1,2]$, deudores de tipo 1 que s\'olo pueden invertir en proyecto 1.}.}
+
+\item{\emph{Riesgo Moral}: Aqu\'i todos los deudores tienen acceso a los dos tipos de proyecto, pero escoger\'an entre uno de ellos dependiendo de la tasa de inter\'es.}
+\end{enumerate}
+\end{frame}
+
+\end{document} 
