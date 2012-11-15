@@ -1,0 +1,119 @@
+\documentclass{beamer}
+\usefonttheme{professionalfonts}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{subfigure}
+\usepackage[dvips]{psfrag}
+
+
+
+\title{Policy Analysis Using DSGE Models: An Introduction}
+\subtitle{Apuntes de Clase}
+\author{Gonzalo Salazar C. }
+\date{mie 14 de noviembre de 2012}
+\begin{document}
+\frame{\titlepage}
+
+
+\begin{frame}{Contextualizaci\'on}
+Los modelos de equilibrio din\'amico est\'an en boga hoy en d\'ia por ser una de las herramientas que modela la realidad de forma de considerar todo tipo de hechos estilizados de forma integra. Actualmente, los Bancos Centrales presentan de esta manera una perspectiva econ\'omica y pol\'iticas dirigidas hacia el p\'ublico por una v\'ia formal.
+
+\medskip
+Los modelos que se presentar\'an a continuaci\'on est\'an confeccionados bajo fundamentos microecon\'omicos, adem\'as de integrar las elecciones intertemporales que realizan los agentes participantes de la econom\'ia. Por esta v\'ia, los modelos de equilibrio general capturan la interacci\'on generada entre las acciones de pol\'itica y el comportamiento de los agentes.
+
+\medskip
+Como se ver\'a, se har\'a \'enfasis en tres variables macroecon\'omicas de particular inter\'es: \textbf{inflaci\'on}, \textbf{crecimiento del PIB} y \textbf{tasa de inter\'es a c/p}.
+
+\medskip
+El estudio de estos modelos se torna f\'acil de generalizar debido a los supuestos sobre el comportamiento de los bogares y de las firmas, los cuales forjan estos.
+\end{frame}
+
+\begin{frame}{Estructura}
+Los modelos DSGE se componen de tres bloques fundamentales:
+\begin{enumerate}
+\item{\emph{Demanda}: Esta determina el nivel de actividad (producto) ($Y$) como funci\'on de la tasa de inter\'es real ex-ante y las expectativas sobre el nivel de actividad futura ($Y^{e}$)\footnote{Todo en t\'erminos reales.}.}
+\item{\emph{Oferta}: El nivel de actividad representa el insumo clave para la determinaci\'on de la inflaci\'on ($\pi$) en conjunto con las expectativas de la inflaci\'on futura ($\pi^{e}$).}
+\item{\emph{Ecuaci\'on de Pol\'itica Monetaria}: Finalmente, la ecuaci\'on $i=f^{i}(\pi-\pi^{*}, Y,\ldots)$ describe c\'omo el banco central fija la tasa de inter\'es nominal en funci\'on del nivel de producto e inflaci\'on.}
+\end{enumerate}
+
+Es as\'i como el 3er \'item cierra el ciclo que se repite p/p. De esta forma, queda en evidencia que los lineamientos sobre pol\'itica monetaria poseen una gran influencia en la formaci\'on de expectativas. Por \'ultimo, es importante se\~nalar que durante cada periodo se cuenta con eventos aleatorios que perturban la econom\'ia, los cuales son modelados v\'ia shocks.
+\end{frame}
+
+\begin{frame}{Microfundamentos para un modelo DSGE simple}
+La econom\'ia est\'a modelada por tres agentes principales:
+\begin{itemize}
+\item[i.]{\textbf{Hogares}:}
+Para este caso, la \'unica forma de gasto ser\'a v\'ia consumo, existiendo una relaci\'on negativa entre tasa de inter\'es y la demanda obtenida por las decisiones de consumo de los hogares. Estos obtienen las siguientes condiciones de primer orden:
+\begin{eqnarray}
+\frac{1}{C_{t}} & = & E_{t}\left [ \frac{\beta b_{t+1}}{b_{t}} \frac{1}{C_{t+1}} \frac{R_{t}}{P_{t+1}/P_{t}} \right ] \\
+\frac{v'(H_{t}(i))}{\Lambda_{t}/b_{t}} & = & W_{t}(i)
+\end{eqnarray}
+Donde (1) muestra que la tasada de inter\'es futuras son importantes para determinar el nivel de producto hoy, como el nivel actual de tasa de inter\'es de c/p. Y (2) representa la decisi\'on sobre oferta de trabajo, en la cual se se\~nala que los 'americanos' est\'an dispuestos a trabajar m\'as horas en firmas que paguen un salario alto, y viceversa.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{...continuaci\'on}
+\begin{itemize}
+\item[ii.]{\textbf{Firmas}:}
+En esta parte, se describe como estas determinan sus precios como funci\'on del nivel de demanda que enfrentan, es as\'i como existe una relaci\'on positiva entre inflaci\'on y actividad real (producto). El mercado de bienes intermedios es monopol\'isticamente competitivo, adem\'as se asume que las firmas cambian sus precios de manera poco frecuente. La CPO que enfrentan:
+\begin{eqnarray*}
+E_{t}\sum_{s=0}^{\infty}(\alpha\beta)^{s}\Lambda_{t+s}Y_{t+s}P_{t+s}^{\theta_{t+s}-1}\left [ P_{i}^{*}(i)-\mu_{t+s}\frac{W_{t+s(i)}}{A_{t+s}} \right ] & = & 0 \ \forall i\in\Omega_{t}
+\end{eqnarray*}
+
+De esta forma, las firmas fijan sus precios racionalmente en el punto que su margen (ingresos marginales) son superiores a su costo marginal.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{...continuaci\'on}
+\begin{itemize}
+\item[iii.]{\textbf{Banco Central}:}
+La ecuaci\'on\footnote{\emph{Taylor} [1993].} que maneja el Banco Central es:
+\begin{eqnarray*}
+i_{t} & = & \rho i_{t-1}+(1-\rho)[r_{t}^{e}+\pi_{t}^{*}+\phi_{\pi}(\pi_{t}^{4Q}-\pi_{t}^{*})+\phi_{y}(y_{t}-y_{t}^{e})]+\varepsilon_{t}
+\end{eqnarray*}
+De esta forma, cuando la tasa de inter\'es es baja, la gente demanda m\'as bienes de consumo (demanda alta) lo que genera que los costos marginales de las firmas incrementen. Lo anterior, conlleva a un aumento en los precios que a posteriori impacta en los niveles de inflaci\'on (sube).
+
+\medskip
+La discusi\'on surge cuando se desea fijar el nivel de producto \'optimo versus el nivel de inflaci\'on \'optima, respondiendo de manera opuesta a las pol\'iticas monetarias que pueda manejar el BC.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Evidencia Emp\'irica}
+Los autores usan el modelo para corroborar su aproximaci\'on a la explicaci\'on de los fen\'menos econ\'omicos. Tras extraer datos de bases p\'ublicas obtienen los resultados. Por medio de la comparaci\'on de momentos se obtienen las primeras conclusiones del estudio:
+\begin{itemize}
+\item{El modelo es bueno replicando las volatilidades de los datos.}
+\item{Captura la desviaci\'on est\'andar del crecimiento del GDP y replica, de forma aproximada, la tasa de inter\'es real; sobreestimando, a veces, la desviaci\'on est\'andar de la inflaci\'on.}
+\item{El modelo posee un trade-off entre acomodar a la baja la inflaci\'on en la primera parte de la muestra, generando una cuenta m\'as balanceada de fuentes de volatilidad inflacionaria.}
+\item{El modelo tambi\'en replica la correlaci\'on positiva entre inflaci\'on y tasa de inter\'es nominal presenten en los datos.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Modelo a prueba}
+Se estudia el 'repunte en inflaci\'on' sufrido por EE.UU. durante el primer semestre del 2004. Con el fin de mostrar el funcionamiento del modelo se establecen tres preguntas a responder:
+\begin{enumerate}
+\item{?`Fue predecible el augmeno de la inflaci\'on?}
+\item{?`Qu\'e explica las discrepancias de predicci\'on entre el modelo estimado y las trayectorias observadas de inflaci\'on, crecimiento de GDP y tasa de los fondos federales (bonos)?}
+\item{?`Pudiera la pol\'itica monetaria alcanzar una transici\'on suavizada hacia tasas de inflaci\'on bajo dos por ciento? Y si lo fuera ?`a qu\'e costo, en t\'erminos de volatilidad agregada en producto y tasa de inter\'es? }
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{...continuaci\'on}
+Dentro de las conclusiones que se derivan de este estudio:
+\begin{itemize}
+\item{El alza inflacionaria de 2004 fue producto de niveles de cercanos al uno por ciento, a principios de 2003, a valores sostenidos sobre dos por ciento a trav\'es del 2008.}
+\item{Los modelos DSGE presenten shocks e impulsos de pol\'iticas que son generados por las expectativas que se generan los agentes econ\'omicos.}
+\item{Se extrae que el enfoque m\'as efectivo para controlar la inflaci\'on es por medio de la gesti\'on de las expectativas, m\'as que a trav\'es de los movimientos que se hagan en la actualidad en lo que respecta a instrumentos de pol\'itica.}
+\item{Los modelos de equilibrio general poseen el potencial para ampliar el entendimiento de estos procesos por medio de la integraci\'on de una valoraci\'on cuantitativa de la conexi\'on entre la pol\'itica actual, las expectaciones y los resultados econ\'omicos.}
+\end{itemize}
+
+\end{frame}
+
+\end{document} 
